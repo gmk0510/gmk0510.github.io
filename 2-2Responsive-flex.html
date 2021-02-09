@@ -120,6 +120,45 @@
         body{
             background-color:rgb(70, 70, 70)
         }
+        @media screen and (max-width:1340px){
+            article{
+                height: 50vh;
+            }
+            header{
+                text-align: center;
+            }
+        }
+        @media screen and (max-width:890px){
+            article{
+                height: 55vh;
+            }
+        }
+        @media screen and (max-width:870px){
+            article>figure>img:nth-child(1),
+            article>figure>img:nth-child(3){
+                position: static;
+                margin: 10px;
+            }
+            article>figure>img:nth-child(2){
+                display: none;
+            }
+            article{
+                height: auto;
+            }
+            #f-l,#f-r{
+                height: auto;
+            }
+        }
+        @media screen and (max-width:550px){
+            #f-l,#f-r{
+                display: block;
+            }
+            #f-l>#left_img,#f-r>#right_img{
+                width: auto;
+                padding: 10px;
+                box-shadow: 0 4px 5px 2px #a8a3a3;
+            }
+        }
     </style>
 </head>
 <body>
