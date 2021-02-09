@@ -7,10 +7,88 @@
     <meta name="keyword" content="HTML, Semantic, tag">
     <title>Document</title>
     <style>
+        *{
+            color: white;
+        }
+        .container{
+            background-color: black;
+            margin: 30px;
 
+        }
+        .container>header{
+            height: 12.5vh;
+            background-color: gray;
+            margin: 10px;
+        }
+        .container>nav{
+            background-color: gray;
+            margin: 10px;
+        }
+        .container>nav>ul>li{
+            display: inline-block;;
+            list-style: none;
+            padding: 5px;
+        }
+        .container>main{
+            display: flex;
+            height: 50vh;
+        }
+        .container>main>aside{
+            background-color: gray;
+            margin: 10px;
+            width: 20%;
+            padding: 5px;
+        }
+        .container>main>section{
+            background-color: gray;
+            width: 60%;
+            margin: 10px;
+            padding: 5px;
+        }
+        .container>main>section>article{
+            background-color: rgb(56, 56, 56);
+            padding: 5px;
+        }
+        .container>footer{
+            background-color: gray;
+            margin: 10px;
+            padding: 5px;
+        }
     </style>
 </head>
 <body>
-    
+    <div class="container">
+        <header>
+            <h1>This header</h1>
+        </header>
+        <nav>
+            <ul>
+                <li>This nav</li>
+                <li>This nav</li>
+                <li>This nav</li>
+            </ul>
+        </nav>
+        <main>
+            <aside>
+                This AD
+            </aside>
+            <section>
+                <h2>This section>article1</h2>
+                <article>This article1</article>
+                <h2>This section>article2</h2>
+                <article>This article2</article>
+                <h2>This section>article3</h2>
+                <article>This article3</article>
+                <h2>This section>article4</h2>
+                <article>This article4</article>
+            </section>
+            <aside>
+                This AD
+            </aside>
+        </main>
+        <footer>
+            This footer
+        </footer>
+    </div>
 </body>
 </html>
