@@ -2,58 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="This is Semantic HTML tags">
-    <meta name="keyword" content="HTML, Semantic, tag">
-    <title>Document</title>
+    <title>test</title>
     <style>
-        *{
-            color: white;
-        }
         .container{
-            background-color: black;
-            margin: 30px;
+            border: 1px solid black;
             text-align: center;
-
         }
-        .container>header{
-            height: 12.5vh;
-            background-color: gray;
+        header,nav,aside,section,section,article,footer{
+            border: 1px solid black;
             margin: 10px;
+            padding: 20px
         }
-        .container>nav{
-            background-color: gray;
-            margin: 10px;
-        }
-        .container>nav>ul>li{
-            display: inline-block;;
-            list-style: none;
-            padding: 5px;
-        }
-        .container>main{
+        main{
             display: flex;
-            height: auto;
         }
-        .container>main>aside{
-            background-color: gray;
-            margin: 10px;
-            width: 20%;
-            padding: 5px;
+        main>aside{
+            flex: 1;
         }
-        .container>main>section{
-            background-color: gray;
-            width: 60%;
-            margin: 10px;
-            padding: 5px;
-        }
-        .container>main>section>article{
-            background-color: rgb(56, 56, 56);
-            padding: 5px;
-        }
-        .container>footer{
-            background-color: gray;
-            margin: 10px;
-            padding: 5px;
+        main>section{
+            flex: 2;
         }
     </style>
 </head>
@@ -63,28 +30,26 @@
             <h1>This header</h1>
         </header>
         <nav>
-            <ul>
-                <li>This nav</li>
-                <li>This nav</li>
-                <li>This nav</li>
-            </ul>
+            This nav
         </nav>
         <main>
             <aside>
-                This AD
+                This aside
             </aside>
             <section>
-                <h2>This section>article1</h2>
-                <article>This article1</article>
-                <h2>This section>article2</h2>
-                <article>This article2</article>
-                <h2>This section>article3</h2>
-                <article>This article3</article>
-                <h2>This section>article4</h2>
-                <article>This article4</article>
+                This section
+                <article>
+                    <h2>This article1</h2>
+                </article>
+                <article>
+                    <h2>This article1</h2>
+                </article>
+                <article>
+                    <h2>This article1</h2>
+                </article>
             </section>
             <aside>
-                This AD
+                This asdie
             </aside>
         </main>
         <footer>
