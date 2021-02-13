@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice</title>
+    <style>
+        .container>header>.wrap-links>a{
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 2em;
+            display: inline-block;
+            margin: 5px 20px;
+            background: black;
+            padding: 0 20px;
+            border-radius: 30px; 
+        }
+        .container>header>.wrap-links>a:hover{
+            background: rgb(48, 48, 48);
+            color:rgb(170, 170, 170)
+        }
+        .container>header>.wrap-links{
+            text-align: center;
+            background: rgb(78, 78, 78);
+            padding: 15px;
+            border-radius: 0 0 30px 30px;
+        }
+        .container>main>.items>.item{
+            height: 400px;
+            width: 200px;
+            background-color: rgb(224, 224, 224);
+            display: inline-block;
+            margin: 0 -3px;
+            margin: 60px 30px;
+            border-radius: 20px;
+        }
+        .container>main>.items>.item:hover{
+            transform: translateY(-5%);
+            transition: 2s;
+        }
+        .container>main>.items{
+            text-align: center;
+        }
+        .container{
+            background: linear-gradient(to right, rgb(63, 63, 63), black);
+            /* height: 10; */
+        }
+        body{
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="wrap-links">
+                <a href="#">AAA</a><a href="#">BBB</a><a href="#">CCC</a><a href="#">DDD</a><a href="#">EEE</a>
+                <a href="#">FFF</a><a href="#">GGG</a><a href="#">HHH</a><a href="#">III</a><a href="#">JJJ</a>
+            </div>
+        </header>
+        <main>
+            <div class="items">
+                <div class="item">Item</div>
+                <div class="item">Item</div>
+                <div class="item">Item</div>
+                <div class="item">Item</div>
+                <div class="item">Item</div>
+                <div class="item">Item</div>
+                <div class="item">Item</div>
+                <div class="item">Item</div>
+                <div class="item">Item</div>
+                <div class="item">Item</div>
+                <div class="item">Item</div>
+                <div class="item">Item</div>
+                <div class="item">Item</div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
