@@ -1,8 +1,45 @@
+/* 여백 초기화 */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* 레이아웃 */
 #wrap{
     width: 1200px;
-    height: 500px;
-    background: #ccc;
+    margin: 0 auto;
 }
-#banner{}
-#contents{}
-#footer{}
+
+/* header */
+#header{
+    width: 100%;
+    height: 100px;
+    background: #999;
+}
+#header>.logo{
+    float: left;
+}
+#header>.nav{
+    float: left;
+}
+
+/* banner */
+#banner{
+    width: 100%;
+    height: 300px;
+    background: #222;
+}
+
+/* contents */
+#contents{
+    width: 1200px;
+    height: 200px;
+    background: #333;
+}
+
+/* footer */
+#footer{
+    width: 1200px;
+    height: 100px;
+    background: #444;
+}
