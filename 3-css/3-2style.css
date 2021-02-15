@@ -47,7 +47,6 @@
 }
 
 /* contents */
-#contents{}
 #contents>div{
     float: left;
     width: 33.33333%;
@@ -64,9 +63,6 @@
 }
 
 /* footer */
-#footer{
-
-}
 #footer>.foot1{
     float: left;
     width: 200px;
