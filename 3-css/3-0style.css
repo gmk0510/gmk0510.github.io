@@ -1,46 +1,24 @@
 *{margin: 0; padding: 0;}
-#wrap{width: 1000px; height: 650px; margin: 0 auto;}
-.clearfix::after, .clearfix::before{
-    display: block;
-    content: "";
-    clear: both;
-}
+.clearfix::after, .clearfix::before{content: "";clear: both;display: block;}
+#wrap{width: 1200px; height: 700px; margin: 0 auto;}
+a{text-decoration: none; color: black; display: block; padding: 10px 40px;
+font-weight: bold; font-size: 1.2em;}
+li,ul{list-style: none;}
 
-#header{
-    float: left;
-    width: 200px;
-    height: 650px;
-}
-.logo{
-    height: 130px;
-    background: #999;
-}
-.nav{
-    height: 520px;
-    background: #888;
-}
+#header{background: green; width: 1200px; height: 100px; position: relative;}
+.logo{width: 200px; height: 100px; float: left; background: #999;}
+.nav{float: right; background: #888; position: absolute; right: 20px; top: 30%;}
+.nav>ul{display: inline-block;}
+.nav>ul a:hover{background: #333;}
+.submenu{display: none;}
 
-#right{
-    float: left;
-    width: 800px;
-    height: 650px;
-}
-#slider{
-    background: #777;
-    height: 350px;
-    width: 800px;
-}
+#slider{height: 300px; width: 1200px; background: #777;}
 
-#contents>div{
-    float: left;
-    width: 33.3333%;
-    height: 200px;
-}
+#contents>div{float: left; width: 400px; height: 200px;}
 .cont1{background: #666;}
 .cont2{background: #555;}
 .cont3{background: #444;}
 
-footer>div{float: left;}
-.foot1{background: #333; width: 160px; height: 100px;}
-.foot2{background: #222; width: 640px; height: 50px;}
-.foot3{background: #111; width: 640px; height: 50px;}
+.foot1{float: left; background: #333; width: 200px; height: 100px;}
+.foot2{float: left; background: #222; width: 1000px; height: 50px;}
+.foot3{float: left; background: #444; width: 1000px; height: 50px;}
