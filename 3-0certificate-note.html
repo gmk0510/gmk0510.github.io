@@ -4,63 +4,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title></title>
     <link rel="stylesheet" href="3-css/3-0style.css">
 </head>
 <body>
     <div id="wrap">
-        <header id="header" class="clearfix">
+        <div id="header">
             <h1 class="logo">로고</h1>
-            <nav class="nav">
-                <ul>
-                    <li><a href="#">MENU-1</a>
-                        <ul class="submenu">
-                            <li><a href="#">SubMenu-1</a></li>
-                            <li><a href="#">SubMenu-2</a></li>
-                            <li><a href="#">SubMenu-3</a></li>
-                            <li><a href="#">SubMenu-4</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <ul>
-                    <li><a href="#">MENU-2</a>
-                        <ul class="submenu">
-                            <li><a href="#">SubMenu-1</a></li>
-                            <li><a href="#">SubMenu-2</a></li>
-                            <li><a href="#">SubMenu-3</a></li>
-                            <li><a href="#">SubMenu-4</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <ul>
-                    <li><a href="#">MENU-3</a>
-                        <ul class="submenu">
-                            <li><a href="#">SubMenu-1</a></li>
-                            <li><a href="#">SubMenu-2</a></li>
-                            <li><a href="#">SubMenu-3</a></li>
-                            <li><a href="#">SubMenu-4</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <ul>
-                    <li><a href="#">MENU-4</a>
-                        <ul class="submenu">
-                            <li><a href="#">SubMenu-1</a></li>
-                            <li><a href="#">SubMenu-2</a></li>
-                            <li><a href="#">SubMenu-3</a></li>
-                            <li><a href="#">SubMenu-4</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-        </header>
+            <div class="wrap_nav">
+                <nav class="nav">
+                    <ul>
+                        <li><a href="#" class="menu">Menu-1</a>
+                            <ul class="submenu">
+                                <li><a href="#">submenu-1</a></li>
+                                <li><a href="#">submenu-2</a></li>
+                                <li><a href="#">submenu-3</a></li>
+                                <li><a href="#">submenu-4</a></li>
+                            </ul>
+                        </li>
+                    </ul><ul>
+                        <li><a href="#" class="menu">Menu-2</a>
+                            <ul class="submenu">
+                                <li><a href="#">submenu-1</a></li>
+                                <li><a href="#">submenu-2</a></li>
+                                <li><a href="#">submenu-3</a></li>
+                                <li><a href="#">submenu-4</a></li>
+                            </ul>
+                        </li>
+                    </ul><ul>
+                        <li><a href="#" class="menu">Menu-3</a>
+                            <ul class="submenu">
+                                <li><a href="#">submenu-1</a></li>
+                                <li><a href="#">submenu-2</a></li>
+                                <li><a href="#">submenu-3</a></li>
+                                <li><a href="#">submenu-4</a></li>
+                            </ul>
+                        </li>
+                    </ul><ul>
+                        <li><a href="#" class="menu">Menu-4</a>
+                            <ul class="submenu">
+                                <li><a href="#">submenu-1</a></li>
+                                <li><a href="#">submenu-2</a></li>
+                                <li><a href="#">submenu-3</a></li>
+                                <li><a href="#">submenu-4</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
 
         <section id="slider"><h2>이미지 슬라이드</h2></section>
 
         <section id="contents">
-            <div class="cont1"><h3>공지사항/갤러리</h3></div>
-            <div class="cont2"><h3>배너</h3></div>
-            <div class="cont3"><h3>바로가기</h3></div>
+            <div class="con1"><h3>공지사항</h3></div>
+            <div class="con2"><h3>배너</h3></div>
+            <div class="con3"><h3>바로가기</h3></div>
         </section>
 
         <footer id="footer">
@@ -68,16 +67,17 @@
             <div class="foot2"><h3>하단메뉴</h3></div>
             <div class="foot3"><h3>Copyright</h3></div>
         </footer>
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <script>
-            $(".nav>ul>li").mouseover(function(){
-                $(".nav>ul>li>ul").stop().slideDown(200);
-            });
-            $(".nav>ul>li").mouseout(function(){
-                $(".nav>ul>li>ul").stop().slideUp(200);
-            });
-        </script>
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(".wrap_nav>.nav>ul>li").mouseenter(function(){
+            $(".wrap_nav>.nav>ul>li>ul").stop().slideDown(200);
+        });
+        $(".wrap_nav>.nav>ul>li").mouseleave(function(){
+            $(".wrap_nav>.nav>ul>li>ul").stop().slideUp(200);
+        });
+    </script>
+
 </body>
 </html>
