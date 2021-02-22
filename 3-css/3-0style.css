@@ -4,14 +4,22 @@
 li,ul{list-style: none;}
 a{color: black; text-decoration: none;}
 
-#header{background: royalblue; text-align: center;}
+/* #header{background: royalblue; text-align: center;}
 #header .logo{float: left; width: 200px; height: 100px; background: saddlebrown;}
 #header .nav{float: right; width: 600px; background: salmon; margin-top: 25px;}
 #header .nav li{float: left; width: 25%; position: relative;}
 #header .nav li a{display: block; padding: 10px; color: white;}
 #header .nav li a:hover{background: tomato;}
 #header .nav li ul.submenu{display: none; position: absolute; left: 0; background: #999;}
-#header .nav li ul.submenu li{width: 100%;}
+#header .nav li ul.submenu li{width: 100%;} */
 
+#wrap{display: flex;}
 
-#slide{width: 1200px; height: 300px; background: #923;}
+#side .logo{height: 150px; width: 300px; background: darkolivegreen;}
+#side .nav{width: 300px; height: 750px; background: darkseagreen;}
+#side .nav li{background: darkslategrey; position: relative;}
+#side .nav li a{display: block; color: white; padding: 10px;}
+#side .nav li a:hover{background: dimgrey;}
+#side .nav li ul.submenu{display: none; position: absolute; width: 200px; right: -200px; top: 0;}
+
+section{width: 900px; height: 900px; background: #555;}
