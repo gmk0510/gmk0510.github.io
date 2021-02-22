@@ -1,28 +1,17 @@
+#wrap{width: 1200px; margin: 0 auto;}
 *{margin: 0; padding: 0;}
-#wrap{width: 1200px; margin: 0 auto; text-align: center;}
+.clearfix::before, .clearfix::after{content: ""; clear: both; display: block;} 
 li,ul{list-style: none;}
+a{color: black; text-decoration: none;}
 
-#header{display: flex; background: #888;}
-#header .logo{width: 200px; height: 100px; background: #999;}
-#header .wrap_nav{width: 1000px; height: 100px; background: #888;}
+#header{background: royalblue; text-align: center;}
+#header .logo{float: left; width: 200px; height: 100px; background: saddlebrown;}
+#header .nav{float: right; width: 600px; background: salmon; margin-top: 25px;}
+#header .nav li{float: left; width: 25%; position: relative;}
+#header .nav li a{display: block; padding: 10px; color: white;}
+#header .nav li a:hover{background: tomato;}
+#header .nav li ul.submenu{display: none; position: absolute; left: 0; background: #999;}
+#header .nav li ul.submenu li{width: 100%;}
 
-#header .wrap_nav{position: relative;}
-#header .wrap_nav .nav{float: right; position: absolute; top: 40%; right: 40px;}
-#header .wrap_nav .nav>ul{display: inline-block;}
-#header .wrap_nav .nav .menu{font-weight: bold;}
-#header .wrap_nav .nav li{width: 150px;}
-#header .wrap_nav .nav .submenu{display: none;}
-#header .wrap_nav .nav ul a{padding: 5px 10px; font-size: 1.1em; text-decoration: none; color: black; display: block; background: #555;}
-#header .wrap_nav .nav ul a:hover{background: #444;}
 
-#slider{width: 1200px; height: 300px; background: #777;}
-
-#contents{display: flex;}
-#contents .con1{width: 400px; height: 200px; background: #666;}
-#contents .con2{width: 400px; height: 200px; background: #555;}
-#contents .con3{width: 400px; height: 200px; background: #444;}
-
-#footer{display: flex;}
-#footer .foot1{width: 200px; height: 100px; background: #333;}
-#footer .foot2{width: 800px; height: 100px; background: #222;}
-#footer .foot3{width: 200px; height: 100px; background: #999;}
+#slide{width: 1200px; height: 300px; background: #923;}
