@@ -9,81 +9,55 @@
 </head>
 <body>
     <div id="wrap">
-        <div id="side">  
-            <div id="header" class="clearfix">
-                <h1 class="logo">로고</h1>
-                <nav class="nav">
-                    <ul>
-                        <li><a href="#">Menu-1</a>
-                            <ul class="submenu">
-                                <li><a href="#">submenu-1</a></li>
-                                <li><a href="#">submenu-2</a></li>
-                                <li><a href="#">submenu-3</a></li>
-                                <li><a href="#">submenu-4</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li><a href="#">Menu-2</a>
-                            <ul class="submenu">
-                                <li><a href="#">submenu-1</a></li>
-                                <li><a href="#">submenu-2</a></li>
-                                <li><a href="#">submenu-3</a></li>
-                                <li><a href="#">submenu-4</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li><a href="#">Menu-3</a>
-                            <ul class="submenu">
-                                <li><a href="#">submenu-1</a></li>
-                                <li><a href="#">submenu-2</a></li>
-                                <li><a href="#">submenu-3</a></li>
-                                <li><a href="#">submenu-4</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li><a href="#">Menu-4</a>
-                            <ul class="submenu">
-                                <li><a href="#">submenu-1</a></li>
-                                <li><a href="#">submenu-2</a></li>
-                                <li><a href="#">submenu-3</a></li>
-                                <li><a href="#">submenu-4</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+        <div id="header" class="clearfix">
+            <h1 class="logo">로고</h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#">Menu-1</a>
+                        <ul class="submenu">
+                            <li><a href="#">Submenu-1</a></li>
+                            <li><a href="#">Submenu-2</a></li>
+                            <li><a href="#">Submenu-3</a></li>
+                            <li><a href="#">Submenu-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Menu-2</a>
+                        <ul class="submenu">
+                            <li><a href="#">Submenu-1</a></li>
+                            <li><a href="#">Submenu-2</a></li>
+                            <li><a href="#">Submenu-3</a></li>
+                            <li><a href="#">Submenu-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Menu-3</a>
+                        <ul class="submenu">
+                            <li><a href="#">Submenu-1</a></li>
+                            <li><a href="#">Submenu-2</a></li>
+                            <li><a href="#">Submenu-3</a></li>
+                            <li><a href="#">Submenu-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Menu-4</a>
+                        <ul class="submenu">
+                            <li><a href="#">Submenu-1</a></li>
+                            <li><a href="#">Submenu-2</a></li>
+                            <li><a href="#">Submenu-3</a></li>
+                            <li><a href="#">Submenu-4</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
         </div>
-        <section>right</section>
-
-
-        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <script>
-            // $(".nav>ul>li").mouseover(function(){
-            //     $(this).find(".submenu").stop().slideDown(200);
-            // });
-            // $(".nav>ul>li").mouseout(function(){
-            //     $(this).find(".submenu").stop().slideUp(200);
-            // });
-            $(".nav>ul>li").mouseover(function(){
-                $(".nav>ul>li>ul").stop().slideDown(200)
-            });
-            $(".nav>ul>li").mouseout(function(){
-                $(".nav>ul>li>ul").stop().slideUp(200)
-            });
-        </script> -->
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <script>
-            $(".nav>ul>li").hover(
-                function(){
-                    $(this).find(".submenu").stop().slideDown(200)
-                },function(){
-                    $(this).find(".submenu").stop().slideUp(200)
-                })
-        </script>
+        <div id="right">오른쪽</div>
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(".nav>ul>li").hover(function(){
+            $(this).find(".submenu").stop().slideDown();
+        },function(){
+            $(this).find(".submenu").stop().slideUp();
+        });
+    </script>
 </body>
 </html>
