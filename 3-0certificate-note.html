@@ -8,56 +8,30 @@
     <link rel="stylesheet" href="3-css/3-0style.css">
 </head>
 <body>
-    <div id="wrap">
-        <div id="header" class="clearfix">
-            <h1 class="logo">로고</h1>
-            <nav class="nav">
-                <ul>
-                    <li><a href="#">Menu-1</a>
-                        <ul class="submenu">
-                            <li><a href="#">Submenu-1</a></li>
-                            <li><a href="#">Submenu-2</a></li>
-                            <li><a href="#">Submenu-3</a></li>
-                            <li><a href="#">Submenu-4</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Menu-2</a>
-                        <ul class="submenu">
-                            <li><a href="#">Submenu-1</a></li>
-                            <li><a href="#">Submenu-2</a></li>
-                            <li><a href="#">Submenu-3</a></li>
-                            <li><a href="#">Submenu-4</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Menu-3</a>
-                        <ul class="submenu">
-                            <li><a href="#">Submenu-1</a></li>
-                            <li><a href="#">Submenu-2</a></li>
-                            <li><a href="#">Submenu-3</a></li>
-                            <li><a href="#">Submenu-4</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Menu-4</a>
-                        <ul class="submenu">
-                            <li><a href="#">Submenu-1</a></li>
-                            <li><a href="#">Submenu-2</a></li>
-                            <li><a href="#">Submenu-3</a></li>
-                            <li><a href="#">Submenu-4</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-        <div id="right">오른쪽</div>
+    
+
+    <section id="contents">
+        <div class="cont1"><h3>공지사항</h3></div>
+        <div class="cont2"><h3>갤러리</h3></div>
+        <div class="cont3"><h3 class="layerPopup">팝업</h3></div>
+    </section>
+
+    <div class="layer-bg"></div>
+    <div class="layer">
+        <h2>타이틀</h2>
+        <a href="#" class="close">닫기</a>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
-        $(".nav>ul>li").hover(function(){
-            $(this).find(".submenu").stop().slideDown();
-        },function(){
-            $(this).find(".submenu").stop().slideUp();
-        });
+        $(".layerPopup").click(function(){
+            $(".layer-bg").show();
+            $(".layer").show();
+        })
+        $(".layer .close").click(function(){
+            $(".layer-bg").hide();
+            $(".layer").hide();
+        })
     </script>
 </body>
 </html>
