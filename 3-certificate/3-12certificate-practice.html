@@ -18,15 +18,15 @@
             <div class="slideList">
                 <div class="slideImg">
                     <h2>이미지 슬라이드1</h2>
-                    <img src="img/ban01.jpg" alt="이미지1">
+                    <img src="https://placehold.it/1200x360" alt="이미지1">
                 </div>
                 <div class="slideImg">
                     <h2>이미지 슬라이드2</h2>
-                    <img src="img/ban02.jpg" alt="이미지2">
+                    <img src="https://placehold.it/1200x360" alt="이미지2">
                 </div>
                 <div class="slideImg">
                     <h2>이미지 슬라이드3</h2>
-                    <img src="img/ban03.jpg" alt="이미지3">
+                    <img src="https://placehold.it/1200x360" alt="이미지3">
                 </div>
             </div>
         </section>
@@ -49,7 +49,19 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
+        var slideCount = $(".slideImg").length;
+        var currentIndex = 0;
+        var slidePosition;
 
+        setInterval(function(){
+            if(currentIndex < slideCount - 1){
+                currentIndex++;
+            }else{
+                currentIndex = 0;
+            }
+            slidePosition = currentIndex * (-1200)+"px";
+            $(".slideList").animate({ left:slidePosition },400);
+        },3000);
     </script>
 </body>
 </html>
