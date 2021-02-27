@@ -8,22 +8,31 @@ a{text-decoration: none; color: #333;}
 #wrap{width: 1000px; margin: 0 auto;}
 #header{background: #999; height: 100px;}
 
-/* #banner{}
-#content1{}
-#content2{}
-#footer{} */
-
 /* header */
 #header h1{float: left; padding-top: 10px;}
-#header .nav{float: right;}
-/* #header .nav ul{} */
-#header .nav li{float: left;}
-#header .nav li a{display: block; padding: 40px 15px;}
+
+#header .nav{float: right; font-weight: bold; width: 700px; background: #777; text-align: center; margin-top: 20px;}
+#header .nav li{float: left; width: 20%; position: relative;}
+#header .nav li a{display: block; padding: 20px 10px;}
+#header .nav li a:hover{background: #555;}
+#header .nav li ul.submenu{display: none; position: absolute; left: 0; background: #666; z-index: 1000;}
+#header .nav li ul.submenu li{width: 100%;}
 
 /* content1 */
 #content1{margin-top: 10px;}
-#content1 .notice{float: left; width: 49%; margin-right: 2%; height: 220px; background: #555;}
+#content1 .notice{float: left; width: 49%; margin-right: 2%; height: 220px; border: 1px solid #ccc; box-sizing: border-box;}
 #content1 .ad{float: left; width: 49%;}
+
+/* notice */
+.notice{position: relative; padding: 10px;}
+.notice ul li{float: left; margin-right: 20px;}
+.notice ul li a{font-size: 24px; color: #999; font-weight: bold;}
+.notice ul li.active a{color: black;}
+.notice ul li ul{position: absolute; top: 60px; left: 20px;}
+.notice ul li ul li{width: 100%; padding: 5px 0;}
+.notice ul li ul li a{float: left; width: 60%; font-size: 16px; color: #333;
+overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-weight: normal;}
+.notice ul li ul li span{float: right; width: 20%;}
 
 /* content2 */
 #content2{margin-top: 20px;}
@@ -39,3 +48,8 @@ a{text-decoration: none; color: #333;}
 #footer address ul{width: 70%;}
 #footer address li{display: inline-block; line-height: 2;}
 #footer address p{text-transform: uppercase; padding-top: 30px;}
+
+/* popup */
+.layoutPopup{border: 1px solid black; font-size: 1.2em; background: white; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 500px; height: 500px; z-index: 500;}
+.layoutPopup a{position: absolute; bottom: 10px; right: 10px;}
+.PopupBg{height: 100%; width: 100%; background: rgba(0,0,0,0.5); position: absolute; top: 0; left: 0; z-index: 400;}

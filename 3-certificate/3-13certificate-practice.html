@@ -13,11 +13,46 @@
             <h1><a href="#"><img src="https://placehold.it/200x80" alt="로고"></a></h1>
             <nav class="nav">
                 <ul class="clearfix">
-                    <li><a href="#">즐길거리</a></li>
-                    <li><a href="#">요금/우대혜택</a></li>
-                    <li><a href="#">참여프로그램</a></li>
-                    <li><a href="#">이용가이드</a></li>
-                    <li><a href="#">소통서비스</a></li>
+                    <li><a href="#">즐길거리</a>
+                        <ul class="submenu">
+                            <li><a href="#">submenu-1</a></li>
+                            <li><a href="#">submenu-2</a></li>
+                            <li><a href="#">submenu-3</a></li>
+                            <li><a href="#">submenu-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">요금/우대혜택</a>
+                        <ul class="submenu">
+                            <li><a href="#">submenu-1</a></li>
+                            <li><a href="#">submenu-2</a></li>
+                            <li><a href="#">submenu-3</a></li>
+                            <li><a href="#">submenu-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">참여프로그램</a>
+                        <ul class="submenu">
+                            <li><a href="#">submenu-1</a></li>
+                            <li><a href="#">submenu-2</a></li>
+                            <li><a href="#">submenu-3</a></li>
+                            <li><a href="#">submenu-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">이용가이드</a>
+                        <ul class="submenu">
+                            <li><a href="#">submenu-1</a></li>
+                            <li><a href="#">submenu-2</a></li>
+                            <li><a href="#">submenu-3</a></li>
+                            <li><a href="#">submenu-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">소통서비스</a>
+                        <ul class="submenu">
+                            <li><a href="#">submenu-1</a></li>
+                            <li><a href="#">submenu-2</a></li>
+                            <li><a href="#">submenu-3</a></li>
+                            <li><a href="#">submenu-4</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
         </header>
@@ -30,10 +65,27 @@
 
         <section id="content1" class="clearfix">
             <article class="notice">
-                fff
+                <ul class="clearfix">
+                    <li class="active"><a href="#">롯데월드 소식</a>
+                        <ul>
+                            <li><a href="#">1.첫번째 목록 1.첫번째 목록 1.첫번째 목록</a><span>2019.05.03</span></li>
+                            <li><a href="#">1.첫번째 목록 1.첫번째 목록 1.첫번째 목록</a><span>2019.05.03</span></li>
+                            <li><a href="#">1.첫번째 목록 1.첫번째 목록 1.첫번째 목록</a><span>2019.05.03</span></li>
+                            <li><a href="#">1.첫번째 목록 1.첫번째 목록 1.첫번째 목록</a><span>2019.05.03</span></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">뉴스, 공지</a>
+                        <ul>
+                            <li><a href="#">2.두번째 목록 2.두번째 목록 2.두번째 목록</a><span>2019.05.03</span></li>
+                            <li><a href="#">2.두번째 목록 2.두번째 목록 2.두번째 목록</a><span>2019.05.03</span></li>
+                            <li><a href="#">2.두번째 목록 2.두번째 목록 2.두번째 목록</a><span>2019.05.03</span></li>
+                            <li><a href="#">2.두번째 목록 2.두번째 목록 2.두번째 목록</a><span>2019.05.03</span></li>
+                        </ul>
+                    </li>
+                </ul>
             </article>
             <figure class="ad">
-                <img src="https://placehold.it/490x220" alt="figureimg">
+                <a href="#"><img src="https://placehold.it/490x220" alt="figureimg"></a>
             </figure>
         </section>
         <!-- //content1-->
@@ -75,5 +127,46 @@
         </footer>
         <!-- //footer-->
     </div>
+
+    <!-- //팝업-->
+    <div class="layoutPopup">
+        타이틀
+        <a href="#">닫기</a>
+    </div>
+    <div class="PopupBg"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        // nav
+        $(".nav>ul>li").mouseover(function(){
+            $(".nav>ul>li>ul").stop().slideDown(200);
+        });
+        $(".nav>ul>li").mouseout(function(){
+            $(".nav>ul>li>ul").stop().slideUp(200);
+        })
+
+        // tab
+        var tabmenu = $(".notice");
+
+        tabmenu.find("ul>li>ul").hide();
+        tabmenu.find("ul>li.active>ul").show();
+        
+        function tabList(e){
+            var target = $(this);
+            target.next().show().parent("li").addClass("active").siblings("li").removeClass("active").find("ul").hide();
+        };
+
+        tabmenu.find("ul>li>a").click(tabList);
+
+        // Popup
+        $(".layoutPopup>a").click(function(){
+            $(".layoutPopup").hide();
+            $(".PopupBg").hide();
+        });
+        $(".ad").click(function(){
+            $(".layoutPopup").show();
+            $(".PopupBg").show();
+        })
+</script>
 </body>
 </html>
