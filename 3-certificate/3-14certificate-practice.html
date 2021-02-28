@@ -59,7 +59,20 @@
         <!-- //header-->
 
         <section id="banner">
-            <img src="https://placehold.it/1000x300" alt="이벤트 click 팝업 이미지">
+            <div class="slideList">
+                <div class="slideImg">
+                    <h2>이미지1</h2>
+                    <img src="https://placehold.it/1000x360" alt="이벤트 click 팝업 이미지1">
+                </div>
+                <div class="slideImg">
+                    <h2>이미지2</h2>
+                    <img src="https://placehold.it/1000x360" alt="이벤트 click 팝업 이미지2">
+                </div>
+                <div class="slideImg">
+                    <h2>이미지3</h2>
+                    <img src="https://placehold.it/1000x360" alt="이벤트 click 팝업 이미지3">
+                </div>
+            </div>
         </section>
         <!-- banner//-->
 
@@ -79,21 +92,97 @@
         </section>
         <!-- content1//-->
 
-        <section id="content2"></section>
+        <section id="content2" class="clearfix">
+            <div class="tab-menu">
+                <div class="tab-btn">
+                    <ul>
+                        <li class="active"><a href="#">실시간 베스트 /</a></li>
+                        <li><a href="#">생생한 리뷰</a></li>
+                    </ul>
+                </div>
+                <div class="tab-cont">
+                    <div class="best" class="clearfix">
+                        <figure>
+                            <img src="http://placehold.it/300x300" alt="이미지1">
+                            <figcaption>
+                                이미지1
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img src="http://placehold.it/300x300" alt="이미지2">
+                            <figcaption>
+                                이미지2
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img src="http://placehold.it/300x300" alt="이미지3">
+                            <figcaption>
+                                이미지3
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="best" class="clearfix">
+                        <figure>
+                            <img src="http://placehold.it/300x300" alt="이미지1">
+                            <figcaption>
+                                이미지11
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img src="http://placehold.it/300x300" alt="이미지2">
+                            <figcaption>
+                                이미지22
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img src="http://placehold.it/300x300" alt="이미지3">
+                            <figcaption>
+                                이미지33
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            
+
+
+            
+        </section>
         <!-- content2//-->
 
-        <foote id="footer"> </foote>
+        <foote id="footer" class="clearfix">
+            <h2><img src="http://placehold.it/150x70" alt="footer"></h2>
+            <div class="foot">
+                <ul>
+                    <li><a href="#">이용약관 ㅣ</a></li>
+                    <li><a href="#">개인정보처리방침 ㅣ</a></li>
+                    <li><a href="#">법적고지 ㅣ</a></li>
+                    <li><a href="#">사업자 정보확인</a></li>
+                </ul>
+                <address>
+                    씨제이 제일제당(주) 대표자: 구민규<br>
+                    주소: 서울시 강남구 XXX로 77길 13 ㅣ 사업자 등록번호: 100-39-123 <br>
+                    통신판매업신고 중구 88903호 개인정보취급방침
+                </address>
+            </div>
+        </foote>
         <!-- footer//-->
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- //레이어 팝업-->
+     <div class="layout-Popup">
+         타이틀
+         <a href="#">닫기</a>
+     </div>
+     <div class="layout-bg"></div>
+
+
+    <!-- //script-->
+    <script src="3-script/3-14script.js"></script>
+    <script src="3-script/3-14custom.js"></script>
     <script>
-        $(".nav>ul>li").mouseover(function(){
-            $(".nav>ul>li>ul").stop().slideDown(200);
-        });
-        $(".nav>ul>li").mouseout(function(){
-            $(".nav>ul>li>ul").stop().slideUp(200);
-        })
+
     </script>
+    
 </body>
 </html>
