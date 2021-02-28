@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookit</title>
+    <link rel="stylesheet" href="3-css/3-14style.css">
+</head>
+<body>
+    <div id="wrap">
+        <header id="header" class="clearfix">
+            <h1><a href="#"><img src="https://placehold.it/100x50" alt="로고"></a></h1>
+            <nav class="nav">
+                <ul class="clearfix">
+                    <li><a href="#">Cookit 소개</a>
+                        <ul class="submenu">
+                            <li><a href="#">submenu-1</a></li>
+                            <li><a href="#">submenu-2</a></li>
+                            <li><a href="#">submenu-3</a></li>
+                            <li><a href="#">submenu-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Cookit 메뉴</a>
+                        <ul class="submenu">
+                            <li><a href="#">submenu-1</a></li>
+                            <li><a href="#">submenu-2</a></li>
+                            <li><a href="#">submenu-3</a></li>
+                            <li><a href="#">submenu-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">리뷰</a>
+                        <ul class="submenu">
+                            <li><a href="#">submenu-1</a></li>
+                            <li><a href="#">submenu-2</a></li>
+                            <li><a href="#">submenu-3</a></li>
+                            <li><a href="#">submenu-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">이벤트</a>
+                        <ul class="submenu">
+                            <li><a href="#">submenu-1</a></li>
+                            <li><a href="#">submenu-2</a></li>
+                            <li><a href="#">submenu-3</a></li>
+                            <li><a href="#">submenu-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">My쿡킷</a>
+                        <ul class="submenu">
+                            <li><a href="#">submenu-1</a></li>
+                            <li><a href="#">submenu-2</a></li>
+                            <li><a href="#">submenu-3</a></li>
+                            <li><a href="#">submenu-4</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!-- //header-->
+
+        <section id="banner">
+            <img src="https://placehold.it/1000x300" alt="이벤트 click 팝업 이미지">
+        </section>
+        <!-- banner//-->
+
+        <section id="content1" class="clearfix">
+            <article class="left">
+                <h2>우리집도 배달되냐?</h2>
+                <p>너네집은 배달 안된다.</p>
+                <a href="#">배송지 검색</a>
+                <img src="https://placehold.it/50x50" alt="로고">
+            </article>
+            <article class="right">
+                <h2>우리집도 배달되냐?</h2>
+                <p>너네집은 배달 안된다.</p>
+                <a href="#">63:23:10 <em>남은시간</em></a>
+                <img src="https://placehold.it/50x50" alt="로고">
+            </article>
+        </section>
+        <!-- content1//-->
+
+        <section id="content2"></section>
+        <!-- content2//-->
+
+        <foote id="footer"> </foote>
+        <!-- footer//-->
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(".nav>ul>li").mouseover(function(){
+            $(".nav>ul>li>ul").stop().slideDown(200);
+        });
+        $(".nav>ul>li").mouseout(function(){
+            $(".nav>ul>li>ul").stop().slideUp(200);
+        })
+    </script>
+</body>
+</html>
