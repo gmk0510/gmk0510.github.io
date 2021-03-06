@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>certificate-practice-3</title>
     <link rel="stylesheet" href="3-css/3-3style.css">
 </head>
 <body>
-    
     <div id="wrap">
-        <header id="header" class="clearfix">
+        <div id="header" class="clearfix">
             <h1 class="logo">로고</h1>
             <nav class="nav">
-                <ul class="clearfix">
+                <ul>
                     <li><a href="#">MENU-1</a>
                         <ul class="submenu">
                             <li><a href="#">subMenu-1</a></li>
@@ -33,6 +34,7 @@
                             <li><a href="#">subMenu-1</a></li>
                             <li><a href="#">subMenu-2</a></li>
                             <li><a href="#">subMenu-3</a></li>
+                            <li><a href="#">subMenu-4</a></li>
                         </ul>
                     </li>
                     <li><a href="#">MENU-4</a>
@@ -40,42 +42,40 @@
                             <li><a href="#">subMenu-1</a></li>
                             <li><a href="#">subMenu-2</a></li>
                             <li><a href="#">subMenu-3</a></li>
+                            <li><a href="#">subMenu-4</a></li>
                         </ul>
                     </li>
                 </ul>
             </nav>
-        </header>
-        <!-- //header -->
+        </div>
+        <!-- //header-->
 
         <section id="banner">
             <h2>이미지 슬라이드</h2>
         </section>
-        <!-- //banner -->
+        <!-- //banner-->
 
         <section id="contents" class="clearfix">
             <div class="cont1"><h3>공지사항</h3></div>
             <div class="cont2"><h3>갤러리</h3></div>
             <div class="cont3"><h3>팝업</h3></div>
         </section>
-        <!-- //contents -->
+        <!-- //contents-->
 
-        <footer id="footer">
+        <footer id="footer" class="clearfix">
             <div class="foot1"><h3>로고</h3></div>
             <div class="foot2"><h3>Copyright</h3></div>
             <div class="foot3"><h3>SNS</h3></div>
         </footer>
-        <!-- //footer -->
     </div>
-    
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
         $(".nav>ul>li").mouseover(function(){
             $(this).find(".submenu").stop().slideDown(200);
-            // $(this).find(".submenu").show(200);
         });
         $(".nav>ul>li").mouseout(function(){
             $(this).find(".submenu").stop().slideUp(200);
-            // $(this).find(".submenu").hide(200);
         });
     </script>
 </body>
