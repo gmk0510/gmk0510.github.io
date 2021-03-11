@@ -11,27 +11,50 @@
     
 
     <section id="contents">
-        <div class="cont1"><h3>공지사항</h3></div>
+        <div class="cont1">
+            <span id="Fir" class="Sp">공지사항1</span><span id="Sec">공지사항2</span>
+            <div id="box1">
+                <h4>Box1</h4>
+                <h4>Box1</h4>
+                <h4>Box1</h4>
+            </div>
+            <div id="box2" style="display: none;">
+                <h4>Box2</h4>
+                <h4>Box2</h4>
+                <h4>Box2</h4>
+            </div>
+        </div>
+
+
+
+
         <div class="cont2"><h3>갤러리</h3></div>
         <div class="cont3"><h3 class="layerPopup">팝업</h3></div>
     </section>
 
+    <div class="layer"><h2>타이틀</h2><a class="close" href="#">닫기</a></div>
     <div class="layer-bg"></div>
-    <div class="layer">
-        <h2>타이틀</h2>
-        <a href="#" class="close">닫기</a>
-    </div>
-
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
-        $(".layerPopup").click(function(){
-            $(".layer-bg").show();
-            $(".layer").show();
-        })
-        $(".layer .close").click(function(){
+        $(".close").click(function(){
             $(".layer-bg").hide();
             $(".layer").hide();
+        });
+
+        $("#Fir").click(function(){
+            $("#Fir").addClass("Sp");
+            $("#Sec").removeClass("Sp");
+            $("#box2").hide();
+            $("#box1").show();
+        });
+        $("#Sec").click(function(){
+            $("#Sec").addClass("Sp");
+            $("#Fir").removeClass("Sp");
+            $("#box1").hide();
+            $("#box2").show();
         })
     </script>
+
 </body>
 </html>
