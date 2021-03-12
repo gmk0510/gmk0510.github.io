@@ -4,57 +4,105 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>test</title>
     <link rel="stylesheet" href="3-css/3-0style.css">
 </head>
 <body>
-    
-
-    <section id="contents">
-        <div class="cont1">
-            <span id="Fir" class="Sp">공지사항1</span><span id="Sec">공지사항2</span>
-            <div id="box1">
-                <h4>Box1</h4>
-                <h4>Box1</h4>
-                <h4>Box1</h4>
-            </div>
-            <div id="box2" style="display: none;">
-                <h4>Box2</h4>
-                <h4>Box2</h4>
-                <h4>Box2</h4>
-            </div>
+    <div id="wrap">
+        <div id="header" class="clearfix">
+            <h1 class="logo">로고</h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#" class="bold">Menu-1</a>
+                        <ul class="submenu">
+                            <li><a href="#">submenu-1</a></li>
+                            <li><a href="#">submenu-2</a></li>
+                            <li><a href="#">submenu-3</a></li>
+                            <li><a href="#">submenu-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="bold">Menu-2</a>
+                        <ul class="submenu">
+                            <li><a href="#">submenu-1</a></li>
+                            <li><a href="#">submenu-2</a></li>
+                            <li><a href="#">submenu-3</a></li>
+                            <li><a href="#">submenu-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="bold">Menu-3</a>
+                        <ul class="submenu">
+                            <li><a href="#">submenu-1</a></li>
+                            <li><a href="#">submenu-2</a></li>
+                            <li><a href="#">submenu-3</a></li>
+                            <li><a href="#">submenu-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="bold">Menu-4</a>
+                        <ul class="submenu">
+                            <li><a href="#">submenu-1</a></li>
+                            <li><a href="#">submenu-2</a></li>
+                            <li><a href="#">submenu-3</a></li>
+                            <li><a href="#">submenu-4</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
         </div>
+        <!-- //header-->
+        <section id="banner"><h2>이미지 슬라이드</h2></section>
+        <!-- //banenr-->
 
+        <section id="contents">
+            <div class="cont1">
+                <span id="span1" class="tabFocours">공지사항</span>/<span id="span2">갤러리</span>
+                <h4 class="tab1">공지사항111111111</h4>
+                <h4 class="tab1">공지사항111111111</h4>
+                <h4 class="tab1">공지사항111111111</h4>
+                <h4 class="tab1">공지사항111111111</h4>
 
+                <h4 class="tab2">갤러리22222222</h4>
+                <h4 class="tab2">갤러리22222222</h4>
+                <h4 class="tab2">갤러리22222222</h4>
+                <h4 class="tab2">갤러리22222222</h4>
 
+            </div>
+            <div class="cont2">2</div>
+            <div class="cont3"><h3>바로가기</h3></div>
+        </section>
+        <div class="layer">타이틀 <a href="#">닫기</a></div>
+        <div class="layer-bg"></div>
+    </div>
 
-        <div class="cont2"><h3>갤러리</h3></div>
-        <div class="cont3"><h3 class="layerPopup">팝업</h3></div>
-    </section>
-
-    <div class="layer"><h2>타이틀</h2><a class="close" href="#">닫기</a></div>
-    <div class="layer-bg"></div>
-    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
-        $(".close").click(function(){
-            $(".layer-bg").hide();
+        $(".nav>ul>li").mouseover(function(){
+            $(".nav>ul>li>ul").stop().slideDown(200);
+        });
+        $(".nav>ul>li").mouseout(function(){
+            $(".nav>ul>li>ul").stop().slideUp(200);
+        });
+
+        $(".layer>a").click(function(){
             $(".layer").hide();
+            $(".layer-bg").hide();
         });
-
-        $("#Fir").click(function(){
-            $("#Fir").addClass("Sp");
-            $("#Sec").removeClass("Sp");
-            $("#box2").hide();
-            $("#box1").show();
-        });
-        $("#Sec").click(function(){
-            $("#Sec").addClass("Sp");
-            $("#Fir").removeClass("Sp");
-            $("#box1").hide();
-            $("#box2").show();
+        $(".cont3>h3").click(function(){
+            $(".layer").show();
+            $(".layer-bg").show();
         })
-    </script>
 
+        $("#span2").click(function(){
+            $("#span1").removeClass("tabFocours");
+            $("#span2").addClass("tabFocours");
+            $(".tab2").show();
+            $(".tab1").hide();
+        });
+        $("#span1").click(function(){
+            $("#span2").removeClass("tabFocours");
+            $("#span1").addClass("tabFocours");
+            $(".tab1").show();
+            $(".tab2").hide();
+        });
+    </script>
 </body>
 </html>
