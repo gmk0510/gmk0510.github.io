@@ -38,9 +38,10 @@ li{list-style: none;}
 #side{width: 300px; height: 700px; background: #999; text-align: center;}
 
 #header .logo{width: 300px; height: 100px; background: #777;}
+.nav ul li{position: relative;}
 .nav ul li a{display: block; padding: 6px;}
 .nav ul li a:hover{background: #666}
-.nav ul.submenu{display: none; background: orchid;}
+.nav ul.submenu{width: 300px; display: none; background: orchid; position: absolute; right: -300px; top: 0;}
 .nav{background: orange;}
 
 #Rside{width: 900px; height: 700px; background: #888;}
