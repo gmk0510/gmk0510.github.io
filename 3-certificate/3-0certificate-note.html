@@ -1,19 +1,19 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>test</title>
+    <title>Document</title>
     <link rel="stylesheet" href="3-css/3-0style.css">
 </head>
 <body>
     <div id="wrap">
-        <div id="header" class="clearfix">
+        <header id="header" class="clearfix">
             <h1 class="logo">로고</h1>
             <nav class="nav">
                 <ul>
-                    <li><a href="#" class="bold">Menu-1</a>
+                    <li><a href="#">Menu-1</a>
                         <ul class="submenu">
                             <li><a href="#">submenu-1</a></li>
                             <li><a href="#">submenu-2</a></li>
@@ -21,7 +21,7 @@
                             <li><a href="#">submenu-4</a></li>
                         </ul>
                     </li>
-                    <li><a href="#" class="bold">Menu-2</a>
+                    <li><a href="#">Menu-2</a>
                         <ul class="submenu">
                             <li><a href="#">submenu-1</a></li>
                             <li><a href="#">submenu-2</a></li>
@@ -29,7 +29,7 @@
                             <li><a href="#">submenu-4</a></li>
                         </ul>
                     </li>
-                    <li><a href="#" class="bold">Menu-3</a>
+                    <li><a href="#">Menu-3</a>
                         <ul class="submenu">
                             <li><a href="#">submenu-1</a></li>
                             <li><a href="#">submenu-2</a></li>
@@ -37,7 +37,7 @@
                             <li><a href="#">submenu-4</a></li>
                         </ul>
                     </li>
-                    <li><a href="#" class="bold">Menu-4</a>
+                    <li><a href="#">Menu-4</a>
                         <ul class="submenu">
                             <li><a href="#">submenu-1</a></li>
                             <li><a href="#">submenu-2</a></li>
@@ -47,29 +47,8 @@
                     </li>
                 </ul>
             </nav>
-        </div>
-
-        <section id="banner"><h2>이미지 슬라이드</h2></section>
-
-        <section id="contents">
-            <div class="cont1">
-                <span id="span1" class="tabFocours">공지사항</span>/<span id="span2">갤러리</span>
-                <h4 class="tab1">공지사항111111111</h4>
-                <h4 class="tab1">공지사항111111111</h4>
-                <h4 class="tab1">공지사항111111111</h4>
-                <h4 class="tab1">공지사항111111111</h4>
-
-                <h4 class="tab2">갤러리22222222</h4>
-                <h4 class="tab2">갤러리22222222</h4>
-                <h4 class="tab2">갤러리22222222</h4>
-                <h4 class="tab2">갤러리22222222</h4>
-
-            </div>
-            <div class="cont2">2</div>
-            <div class="cont3"><h3>바로가기</h3></div>
-        </section>
-        <div class="layer">타이틀 <a href="#">닫기</a></div>
-        <div class="layer-bg"></div>
+        </header>
+        <section id="banner"><h2>슬라이드</h2></section>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -80,86 +59,6 @@
         $(".nav>ul>li").mouseout(function(){
             $(".nav>ul>li>ul").stop().slideUp(200);
         });
-
-        $(".layer>a").click(function(){
-            $(".layer").hide();
-            $(".layer-bg").hide();
-        });
-        $(".cont3>h3").click(function(){
-            $(".layer").show();
-            $(".layer-bg").show();
-        })
-
-        $("#span2").click(function(){
-            $("#span1").removeClass("tabFocours");
-            $("#span2").addClass("tabFocours");
-            $(".tab2").show();
-            $(".tab1").hide();
-        });
-        $("#span1").click(function(){
-            $("#span2").removeClass("tabFocours");
-            $("#span1").addClass("tabFocours");
-            $(".tab1").show();
-            $(".tab2").hide();
-        });
-    </script>
-</body>
-</html> -->
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>test</title>
-    <link rel="stylesheet" href="3-css/3-0style.css">
-</head>
-<body>
-    <div id="wrap">
-        <div id="banner">
-            <div class="slideList">
-                <div class="slideImg">
-                    <h2>페이드 효과 이미지1</h2>
-                    <img src="https://placehold.it/1200x360" alt="1">
-                </div>
-                <div class="slideImg">
-                    <h2>페이드 효과 이미지2</h2>
-                    <img src="https://placehold.it/1200x360" alt="2">
-                </div>
-                <div class="slideImg">
-                    <h2>페이드 효과 이미지3</h2>
-                    <img src="https://placehold.it/1200x360" alt="3">
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>
-        // var index = 0;
-
-        // setInterval(function(){
-        //     if(index < 2){
-        //         index++;
-        //     } else {
-        //         index = 0;
-        //     }
-
-        //     var slidePosition = index * (-360)+"px"
-        //     $(".slideList").animate({top:slidePosition},400);
-        // },3000);
-
-        $(".slideList").children("div:gt(0)").hide();
-        var current = 0;
-
-        setInterval(function(){
-            var next = (current + 1) % 3;
-            $(".slideList").find("div").eq(current).fadeOut();
-            $(".slideList").find("div").eq(next).fadeIn();
-            current = next;
-        },3000);
     </script>
 </body>
 </html>
