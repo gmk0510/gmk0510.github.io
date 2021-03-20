@@ -38,13 +38,11 @@ li{list-style: none;}
 #wrap{width: 1200px; margin: 0 auto;}
 
 #banner{width: 1200px; height: 300px; overflow: hidden;}
-.slideList{position: relative; width: 1200px; height: 300px;}
-.slideList .slideImg{position: relative;}
+.slideList{position: relative; width: 3600px; height: 300px;}
+.slideList .slideImg{position: relative; width: 1200px; height: 300px; float: left;}
 .slideList .slideImg h2{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
-background: rgba(1,1,1,0.5); border-radius: 20px; padding: 15px;}
+border-radius: 25px; padding: 10px; background: rgba(1,1,1,0.5);}
 .slideList .slideImg img{display: block;}
-
-
 
 
 
