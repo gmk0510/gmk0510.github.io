@@ -9,7 +9,7 @@
 </head>
 <body>
     <div id="wrap">
-        <section id="banner">
+        <div id="banner">
             <div class="slideList">
                 <div class="slideImg">
                     <h2>이미지1</h2>
@@ -24,7 +24,7 @@
                     <img src="https://placehold.it/1200x300" alt="">
                 </div>
             </div>
-        </section>
+        </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- <script>
@@ -44,7 +44,7 @@
         },3000)
     </script>  slide 위아래-->
     
-    <script>
+    <!-- <script>
         var index = 0;
 
         setInterval(function(){
@@ -58,6 +58,18 @@
 
             $(".slideList").animate({right:slidePosition},400);
 
+        },3000)
+    </script> -->
+    <script>
+        var index = 0;
+        setInterval(function(){
+            if(index<2){
+                index++
+            }else{
+                index=0;
+            }
+            var slidePosition = index * (-300)+"px";
+            $(".slideList").animate({top:slidePosition},400)
         },3000)
     </script>
 </body>

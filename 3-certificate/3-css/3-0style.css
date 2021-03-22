@@ -30,7 +30,7 @@ position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); z-inde
 .cont1 span{padding: 10px; cursor: pointer;}
 .cont1 h4{padding: 5px 10px;}
 .cont1 .tab2{display: none;} */
-
+/* 
 *{margin: 0; padding: 0;}
 .clearfix::after,.clearfix::before{clear: both; content: ""; display: block;}
 a{text-decoration: none; color: black;}
@@ -42,8 +42,17 @@ li{list-style: none;}
 .slideList .slideImg{position: relative; width: 1200px; height: 300px; float: left;}
 .slideList .slideImg h2{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
 border-radius: 25px; padding: 10px; background: rgba(1,1,1,0.5);}
-.slideList .slideImg img{display: block;}
+.slideList .slideImg img{display: block;} */
 
+
+#wrap{width: 1200px; margin: 0 auto;}
+
+#banner{width: 1200px; height: 300px; overflow: hidden;}
+.slideList{position: relative; width: 1200px; height: 300px;}
+.slideList .slideImg{position: relative;}
+.slideList .slideImg h2{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+border-radius: 25px; padding: 10px; background: rgba(1,1,1,0.5);}
+.slideList .slideImg img{display: block;}
 
 
 
