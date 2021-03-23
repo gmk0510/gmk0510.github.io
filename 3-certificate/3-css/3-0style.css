@@ -18,7 +18,7 @@ li{list-style: none;}
 
 #contents .cont1{float: left; width: 400px; height: 200px; background: #999;}
 #contents .cont2{float: left; width: 400px; height: 200px; background: #888;}
-#contents .cont3{float: left; width: 400px; height: 200px; background: #777;
+#contents .cont3{float: left; width: 400px; height: 200px; x`background: #777;
 text-align: center;}
 #contents .cont3 h3{padding-top: 50px; cursor: pointer;}
 .layer{width: 400px; height: 400px; background: white; border: 1px solid black;
@@ -45,13 +45,22 @@ border-radius: 25px; padding: 10px; background: rgba(1,1,1,0.5);}
 .slideList .slideImg img{display: block;} */
 
 
-#wrap{width: 1200px; margin: 0 auto;}
+/* #wrap{width: 1200px; margin: 0 auto;}
 
 #banner{width: 1200px; height: 300px; overflow: hidden;}
 .slideList{position: relative; width: 1200px; height: 300px;}
 .slideList .slideImg{position: relative;}
 .slideList .slideImg h2{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
 border-radius: 25px; padding: 10px; background: rgba(1,1,1,0.5);}
+.slideList .slideImg img{display: block;} */
+
+#wrap{width: 1200px; margin: 0 auto;}
+
+#banner{width: 1200px; height: 300px; overflow: hidden;}
+.slideList{position: relative;}
+.slideList .slideImg{position: relative;}
+.slideList .slideImg h2{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+padding: 10px; border-radius: 25px; background: rgba(1,1,1,0.5)}
 .slideList .slideImg img{display: block;}
 
 

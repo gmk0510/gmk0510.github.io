@@ -60,7 +60,7 @@
 
         },3000)
     </script> -->
-    <script>
+    <!-- <script>
         var index = 0;
         setInterval(function(){
             if(index<2){
@@ -71,6 +71,18 @@
             var slidePosition = index * (-300)+"px";
             $(".slideList").animate({top:slidePosition},400)
         },3000)
+    </script> -->
+    <script>
+        var index = 0;
+        setInterval(function(){
+            if(index<2){
+                index++;
+            }else{
+                index=0;
+            }
+            var slidePosition = index * (-300)+"px";
+            $(".slideList").animate({top:slidePosition},400)
+        },3000);
     </script>
 </body>
 </html>
