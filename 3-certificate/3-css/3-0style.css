@@ -1,15 +1,27 @@
 #wrap{width: 1200px; margin: 0 auto;}
 *{margin: 0; padding: 0;}
 
-#banner{width: 1200px; height: 300px; overflow: hidden;}
+/* #banner{width: 1200px; height: 300px; overflow: hidden;}
 .slideList{position: relative;}
 .slideList .slideImg{position: relative;}
 .slideList .slideImg h2{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
 padding: 10px; border-radius: 25px; background: rgba(1,1,1,0.5);}
-.slideList .slideImg img{display: block;}
+.slideList .slideImg img{display: block;} */
 
+#wrap{width: 1200px; margin: 0 auto;}
+.clearfix::after,.clearfix::before{display: block; content: ""; clear: both;}
+a{text-decoration: none; color: black;}
+li{list-style: none;}
 
+#header{width: 1200px; height: 100px; background: #999;}
+.logo{float:left; width: 300px; height: 100px; background: #888;}
 
+.nav{float: right; width: 600px; background: #777; text-align: center; margin-top: 25px;}
+.nav ul li{float: left; width: 25%; position: relative;}
+.nav ul li:hover{background: seagreen;}
+.nav ul li a{display: block; padding: 10px;}
+.nav ul.submenu{position: absolute; left: 0; background: salmon; display: none;}
+.nav ul.submenu li{width: 100%;}
 
 
 
