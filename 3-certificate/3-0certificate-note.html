@@ -42,7 +42,7 @@
     </script>
 </body>
 </html> -->
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -101,6 +101,50 @@
         $(".nav>ul>li").mouseout(function(){
             $(this).find(".submenu").stop().slideUp(200);
         });
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="3-css/3-0style.css">
+</head>
+<body>
+    <div id="wrap">
+        <div id="banner">
+            <div class="slideList">
+                <div class="slideImg">
+                    <h2>이미지1</h2>
+                    <img src="https://placehold.it/1200x300" alt="">
+                </div>
+                <div class="slideImg">
+                    <h2>이미지2</h2>
+                    <img src="https://placehold.it/1200x300" alt="">
+                </div>
+                <div class="slideImg">
+                    <h2>이미지3</h2>
+                    <img src="https://placehold.it/1200x300" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https:/ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+            var index = 0;
+        setInterval(function(){
+            if(index<2){
+                index++;
+            }else{
+                index=0;
+            }
+            var slidePosition = index * (-1200)+"px";
+            $(".slideList").animate({left:slidePosition},400)
+        },3000)
     </script>
 </body>
 </html>
