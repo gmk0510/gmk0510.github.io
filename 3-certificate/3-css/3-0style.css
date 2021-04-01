@@ -30,3 +30,14 @@ li{list-style: none;}
 padding: 10px; border-radius: 25px; background: rgba(1,1,1,0.5);}
 .slideList .slideImg img{display: block;}
 
+#contents .cont1{width: 1200px; height: 100px; text-align: center; background: rgba(1,1,1,0.5);}
+#contents .cont1 h2{cursor: pointer;}
+
+#layerPopup{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+width: 400px; height: 400px; background: white; border: 1px solid black; z-index: 10;}
+#layerPopup a{position: absolute; bottom: 10px; right: 10px;}
+
+.layer-bg{position: absolute; top: 0; left: 0; height: 100%; width: 100%; background: rgba(1,1,1,0.3);
+z-index: 5;}
+
+
