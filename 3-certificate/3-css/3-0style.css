@@ -5,7 +5,7 @@ li{list-style: none;}
 .clearfix::after, .clearfix::before{display: block; clear: both; content: "";}
 
 
-/*  #header{width: 1200px; height: 100px; background: #777;}
+ #header{width: 1200px; height: 100px; background: #777;}
 .logo{width: 300px; height: 100px; background: #999; float: left;}
 .nav{width: 600px; background: #888; float: right; margin-top: 58px; 
 text-align: center; margin-right: 20px; position: relative;}
@@ -20,10 +20,25 @@ text-align: center; margin-right: 20px; position: relative;}
 top: 100px; z-index: 10; display: none;}
 
 
-#banner{width: 1200px; height: 300px; background: #555;} */
+#banner{width: 1200px; height: 300px; overflow: hidden;}
+.slideList{position: relative; width: 1200px; height: 900px;}
+.slideList .slideImg{position: relative;}
+.slideList .slideImg h2{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+padding: 10px; border-radius: 25px; background: rgba(1,1,1,0.5);}
+.slideList .slideImg img{display: block;}
 
 
-#wrap{display: flex;}
+
+
+
+
+
+
+
+
+
+
+/* #wrap{display: flex;}
 #header{width: 300px; height: 1000px; background: #999;}
 #banner{width: 900px; height: 1000px; background: #888;}
 .Bold{font-weight: bold;}
@@ -34,7 +49,7 @@ top: 100px; z-index: 10; display: none;}
 .nav ul li a{display: block; padding: 10px;}
 .nav ul li a:hover{background: cadetblue;}
 .nav ul.submenu{position: absolute; right: -200px; background: chocolate;
-width: 200px; display: none; top: 0;}
+width: 200px; display: none; top: 0;} */
 
 
 
