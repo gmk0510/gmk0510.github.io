@@ -27,9 +27,14 @@ top: 100px; z-index: 10; display: none;}
 padding: 10px; border-radius: 25px; background: rgba(1,1,1,0.5);}
 .slideList .slideImg img{display: block;}
 
-
-
-
+#contents .cont3{width: 1200px; height: 150px; text-align: center;
+font-size: 3em; background: #444;}
+#contents>.cont3>h3{cursor: pointer; display: inline-block;}
+#layout{width: 400px; height: 400px; border: 1px solid black; position: absolute;
+top: 50%; left: 50%; transform: translate(-50%,-50%); background: white; display: none; z-index: 300;}
+#layout a{position: absolute; bottom: 10px; right: 10px;}
+#layourBg{position: absolute; top: 0; left: 0; height: 100%; width: 100%; background: rgba(1,1,1,0.5);
+z-index: 200; display: none;}
 
 
 

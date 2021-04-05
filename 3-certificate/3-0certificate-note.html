@@ -65,7 +65,12 @@
                 </div>
             </div>
         </section>
+        <section id="contents">
+            <div class="cont3"><h3>This AD Click </h3></div>
+        </section>
     </div>
+    <div id="layout">창 <a href="#">닫기</a></div>
+    <div id="layourBg"></div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
@@ -86,7 +91,15 @@
             }
             var slidePoisition = index * (-300)+"px";
             $(".slideList").animate({top:slidePoisition},400);
-        },3000)
+        },3000);
+        $("#contents>.cont3>h3").click(function(){
+            $("#layout").show();
+            $("#layourBg").show();
+        });
+        $("#layout>a").click(function(){
+            $("#layout").hide();
+            $("#layourBg").hide();
+        })
     </script>
 
 
