@@ -6,6 +6,7 @@ li{list-style: none;}
 #wrap{width: 1000px; margin: 0 auto; background: #555;}
 
 /* header */
+#header img{width: 50px; height: 50px;}
 #header h1{float: left; padding: 15px 0 10px 0;}
 #header .nav{float: right; width: 700px; margin-top: 15px; background: #999; text-align: center;}
 #header .nav li{float: left; width: 20%; position: relative;}
@@ -21,7 +22,7 @@ li{list-style: none;}
 .slideList .slideImg{position: relative;}
 .slideList .slideImg h2{position: absolute; top: 40%; left: 39%; padding: 10px;
 border-radius: 20px; background: rgba(0,0,0,0.5);}
-
+#banner img{width: 1000px; height: 360px;}
 
 /* content1 */
 #content1{margin-top: 20px;}
@@ -33,12 +34,14 @@ border-radius: 20px; background: rgba(0,0,0,0.5);}
 #content1 .right h2{font-style: 20px; padding-bottom: 5px;}
 #content1 .right p{font-size: 14px; color: #666; padding-bottom: 15px;}
 #content1 .right img{position: absolute; right: 10px; bottom: 10px;}
+#content1 img{width: 50px; height: 50px;}
 
 /* content2 */
 #content2{margin-top: 30px; text-align: center;}
 #content2 h2{font-size: 24px;}
 #content2 .best figure{float: left; width: 32%; margin-right: 2%;}
 #content2 .best figure:last-child{margin-right: 0;}
+#content2 img{width: 300px; height: 300px;}
 
 .tab-menu .tab-btn ul{overflow: hidden;}
 .tab-menu .tab-btn li{float: left; margin-right: 10px;}
@@ -53,6 +56,7 @@ border-radius: 20px; background: rgba(0,0,0,0.5);}
 #footer .foot ul li{display: inline-block; margin-right: 20px;}
 #footer .foot ul li a{color: white;}
 #footer .foot address{font-style: normal;}
+#footer img{width: 150px; height: 70px;}
 
 /* 레이어 팝업 */
 .layout-Popup{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
