@@ -43,7 +43,7 @@ border-radius: 20px; background: rgba(0,0,0,0.5);}
 .tab-menu .tab-btn ul{overflow: hidden;}
 .tab-menu .tab-btn li{float: left; margin-right: 10px;}
 .tab-menu .tab-btn li a{font-size: 24px; padding-bottom: 15px; color: #999;}
-.tab-menu .tab-btn li.active a{color: #000;}
+.tab-menu .tab-btn li.active a{color: #000; font-weight: bold; font-size: 30px;}
 
 /* footer */
 #footer{color: rgb(146, 146, 146); background: black; display: block; padding: 20px 10px; margin-top: 20px;}
