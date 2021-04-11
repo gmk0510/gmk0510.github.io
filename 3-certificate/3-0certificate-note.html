@@ -50,7 +50,24 @@
                 </ul>
             </nav>
         </div>
-        <div id="right"></div>
+        <div id="right">
+            <section id="banner">
+                <div class="slideList">
+                    <div class="slideImg">
+                        <h2>이미지1</h2>
+                        <img src="http://placehold.it/900x300" alt="">
+                    </div>
+                    <div class="slideImg">
+                        <h2>이미지2</h2>
+                        <img src="http://placehold.it/900x300" alt="">
+                    </div>
+                    <div class="slideImg">
+                        <h2>이미지3</h2>
+                        <img src="http://placehold.it/900x300" alt="">
+                    </div>
+                </div>
+            </section>
+        </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -59,7 +76,17 @@
             $(this).find(".submenu").stop().slideDown(200);
         },function(){
             $(this).find(".submenu").stop().slideUp(200);
-        })
+        });
+        var index = 0;
+        setInterval(function(){
+            if(index<2){
+                index++
+            }else{
+                index=0;
+            }
+            var SP = index * (-900)+"px";
+            $(".slideList").animate({left:SP},400)
+        },3000)
     </script>
 </body>
 </html>
