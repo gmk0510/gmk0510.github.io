@@ -18,11 +18,12 @@ a{text-decoration: none; color: black;}
 .nav ul.submenu{position: absolute; top: 0; right: -200px; background: darkslategrey; width: 200px;
 display: none;}
 
-#banner{width: 900px; height: 300px; overflow: hidden;}
-.slideList{width: 2700px; height: 900px; position: relative;}
-.slideList .slideImg{position: relative; float: left;}
-.slideList .slideImg h2{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
-padding: 10px; border-radius: 25px; background: rgba(1,1,1,0.5);}
+#banner {width: 900px; height: 300px;}
+
+.slideList{position: relative; width: 900px; height: 300px; overflow: hidden;}
+.slideList .slideImg{position: relative;}
+.slideList .slideImg h2{position: absolute; left: 50%; top: 50%; padding: 10px 20px;
+transform: translate(-50%,-50%); background: rgba(255,255,255,0.5); border-radius: 25px;}
 .slideList .slideImg img{display: block;}
 
 
