@@ -1,30 +1,11 @@
 #wrap{width: 1200px; margin: 0 auto;}
-li{list-style: none;}
-a{text-decoration: none; color: black;}
-*{margin: 0; padding: 0;}
-.clearfix::after, .clearfix::before{display: block; content: ""; clear: both;}
-
-#wrap{display: flex;}
-#header{width: 300px; height: 900px; background: #999;}
-#right{width: 900px; height: 900px; background: #888;}
-
-.logo{width: 300px; height: 100px; background: #777;}
-
-.nav{width: 270px; text-align: center; background: #666; margin: 10px auto 0 auto;}
-.nav .Bold{font-weight: bold;}
-.nav ul li{position: relative;}
-.nav ul li a{display: block; padding: 8px;}
-.nav ul li a:hover{background: darksalmon;}
-.nav ul.submenu{position: absolute; top: 0; right: -200px; background: darkslategrey; width: 200px;
-display: none;}
-
-#banner {width: 900px; height: 300px;}
-
-.slideList{position: relative; width: 900px; height: 300px; overflow: hidden;}
+#banner{width: 1200px; height: 300px; overflow: hidden;}
+.slideList{position: relative; width: 1200px; height: 900px;}
 .slideList .slideImg{position: relative;}
-.slideList .slideImg h2{position: absolute; left: 50%; top: 50%; padding: 10px 20px;
-transform: translate(-50%,-50%); background: rgba(255,255,255,0.5); border-radius: 25px;}
-.slideList .slideImg img{display: block;}
+.slideList .slideImg h2{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+padding: 10px; border-radius: 25px; background: rgba(1,1,1,0.5);}
+.slideList .slideImg img{display: block; width: 1200px; height: 300px;}
+
 
 
 
