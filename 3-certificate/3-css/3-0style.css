@@ -1,38 +1,24 @@
 #wrap{width: 1200px; margin: 0 auto;}
-li{list-style: none;}
-a{text-decoration: none; color: black;}
 *{margin: 0; padding: 0;}
-.clearfix::after, .clearfix::before{clear: both; content: ""; display: block;}
 
-#header{background: #999; width: 1200px; height: 100px;}
-.logo{float: left; width: 300px; height: 100px; background: #888;}
-.nav{float: right; width: 600px; background: #666; margin-top: 25px; text-align: center;}
-.nav ul li{float: left; width: 25%; position: relative;}
-.nav ul li a{display: block; padding: 10px;}
-.nav ul li a:hover{background: #444;}
-.nav ul.submenu{position: absolute; left: 0; background: #777; display: none; z-index: 200;}
-.nav ul.submenu li{width: 100%;}
+#banner1{width: 1200px; height: 300px; overflow: hidden;}
+.slideList1{position: relative; width: 1200px; height: 900px;}
+.slideList1 .slideImg1{position: relative;}
+.slideList1 .slideImg1 h2{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+padding: 10px; border-radius: 25px; background: rgba(1,1,1,0.5);}
+.slideList1 .slideImg1 img{display: block;}
 
-#banner{width: 1200px; height: 300px; overflow: hidden;}
-.slideList{position: relative; height: 900px; width: 1200px;}
-.slideList .slideImg{position: relative;}
-.slideList .slideImg h2{padding: 10px; border-radius: 25px; background: rgba(1,1,1,0.5);
-position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);}
-.slideList .slideImg img{display: block;}
-
-#banner2{width: 1200px; height: 300px; overflow: hidden;}
-.slideList2{position: relative; height: 300px; width: 3600px;}
+#banner2{margin-top: 20px; width: 1200px; height: 300px; overflow: hidden;}
+.slideList2{position: relative; width: 3600px; height: 300px;}
 .slideList2 .slideImg2{position: relative; float: left;}
-.slideList2 .slideImg2 h2{padding: 10px; border-radius: 25px; background: rgba(1,1,1,0.5);
-position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);}
+.slideList2 .slideImg2 h2{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+padding: 10px; border-radius: 25px; background: rgba(1,1,1,0.5);}
 .slideList2 .slideImg2 img{display: block;}
 
-#banner3{width: 1200px; height: 300px; overflow: hidden;}
-.slideList3{position: relative; height: 300px; width: 3600px;}
+#banner3{margin-top: 20px; width: 1200px; height: 300px; overflow: hidden;}
+.slideList3{position: relative; width: 3600px; height: 300px;}
 .slideList3 .slideImg3{position: relative; float: left;}
-.slideList3 .slideImg3 h2{padding: 10px; border-radius: 25px; background: rgba(1,1,1,0.5);
-position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);}
+.slideList3 .slideImg3 h2{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+padding: 10px; border-radius: 25px; background: rgba(1,1,1,0.5);}
 .slideList3 .slideImg3 img{display: block;}
-
-
 
