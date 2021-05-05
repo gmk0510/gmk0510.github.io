@@ -1,24 +1,25 @@
 #wrap{width: 1200px; margin: 0 auto;}
 *{margin: 0; padding: 0;}
+li{list-style: none;}
+a{color: black; text-decoration: none;}
+.Bold{font-weight: bold;}
+.clearfix::after, .clearfix::before{clear: both; content: ""; display: block;}
 
-#banner1{width: 1200px; height: 300px; overflow: hidden;}
-.slideList1{position: relative; width: 1200px; height: 900px;}
-.slideList1 .slideImg1{position: relative;}
-.slideList1 .slideImg1 h2{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
-padding: 10px; border-radius: 25px; background: rgba(1,1,1,0.5);}
-.slideList1 .slideImg1 img{display: block;}
+header{width: 1200px; height: 100px; background: blanchedalmond;}
+header .logo{float: left; width: 300px; height: 100px; background: #999;}
+header .nav{float: right; width: 600px; background: #888; text-align: center; margin-top: 25px;}
 
-#banner2{margin-top: 20px; width: 1200px; height: 300px; overflow: hidden;}
-.slideList2{position: relative; width: 3600px; height: 300px;}
-.slideList2 .slideImg2{position: relative; float: left;}
-.slideList2 .slideImg2 h2{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
-padding: 10px; border-radius: 25px; background: rgba(1,1,1,0.5);}
-.slideList2 .slideImg2 img{display: block;}
 
-#banner3{margin-top: 20px; width: 1200px; height: 300px; overflow: hidden;}
-.slideList3{position: relative; width: 3600px; height: 300px;}
-.slideList3 .slideImg3{position: relative; float: left;}
-.slideList3 .slideImg3 h2{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
-padding: 10px; border-radius: 25px; background: rgba(1,1,1,0.5);}
-.slideList3 .slideImg3 img{display: block;}
+.nav ul li{float: left; width: 25%; position: relative;}
+.nav ul.submenu{position: absolute; left: 0; background: cornflowerblue; display: none;}
+.nav ul.submenu li{float: left; width: 100%;}
+.nav ul li a{display: block; padding: 5px;}
+.nav ul li a:hover{background: cadetblue;}
 
+
+#banner{width: 1200px; height: 300px; overflow: hidden;}
+.slideList{width: 3600px; height: 300px; position: relative;}
+.slideList .slideImg{position: relative; float: left;}
+.slideList .slideImg h2{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+padding: 10px; border-radius: 25px; background: rgba(1, 1, 1, 0.5); color: white;}
+.slideList .slideImg img{display: block;}
