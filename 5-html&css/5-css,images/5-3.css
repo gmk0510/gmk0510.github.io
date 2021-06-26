@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+#header{
+    height: 100vh;
+    background-image: url(5-3images/background.png);
+    background-position: center;
+    background-size: cover;
+}
+.container{
+    margin: 0 100px;
+}
+.logo{
+    margin-top: 30px;
+    width: 100px;
+}
+.header-text{
+    max-width: 350px;
+    margin-top: 140px;
+}
