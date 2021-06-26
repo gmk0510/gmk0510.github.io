@@ -13,15 +13,78 @@
         <div class="container">
             <img src="5-css,images/5-3images/logo.png" class="logo" alt="logo">
             <div class="header-text">
-                <h1>The Purpose is to<br /> teach, bring learning to people</h1>
+                <h1>The Purpose is to<br /> teach, bring learning to 
+                people</h1>
+                <span class="square"></span>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Accusantium, est eos tempora sequi ullam laboriosam 
-                aperiam perspiciatis debitis officia? Magnam, nemo. 
-                Cum voluptate saepe nisi doloribus quaerat quo temporibus sint!</p>
+                Accusantium, est eos tempora sequi ullam laboriosam sequi ullam laboriosam 
+                aperiam perspiciatis debitis officia? Address Magnam, nemo.</p>
+                <button class="common-btn">Read More</button>
+                <div class="line">
+                    <span class="line-1"></span><br />
+                    <span class="line-2"></span><br />
+                    <span class="line-3"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <nav id="sideNav">
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT US</a></li>
+            <li><a href="#">FEATURES</a></li>
+            <li><a href="#">COURSES</a></li>
+            <li><a href="#">OFFER</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+    </nav>
+    <img src="5-css,images/5-3images/menu.png" alt="menu" id="menuBtn">
+
+    <!-------- about -------->
+    <section id="about">
+        <div class="about-left-col">
+            <img src="5-css,images/5-3images/about.png">
+        </div>
+        <div class="about-right-col">
+            <div class="about-text">
+                <h1>About Us</h1>
+                <p>Lorem ipsum dolor sit amet consectetur incidunt
+                adipisicing elit. Omnis alias, at illum dolorem 
+                aliquid molestiae tenetur autem officiis, 
+                ut incidunt unde et maiores explicabo? incidunt 
+                Laborum doloribus debitis quod minus quis neque 
+                repellat ex rerum magni assumenda, reprehenderit  
+                eius aliquam, temporibus quos ab iste ut! 
+                quas cupiditate, facilis rem nisi reprehenderit corporis.</p>
+
+                <h2>"learning is not attained by chance, it must be sought
+                for with ardor and attended to with diligence"</h2>
+                <h3>----Abigail</h3>
             </div>
         </div>
     </section>
 
 
+
+
+
+
+
+    
+    <script>
+        var menuBtn = document.querySelector("#menuBtn");
+        var sideNav = document.querySelector("#sideNav");
+
+        // sideNav.style.right = "-250px";
+        menuBtn.onclick = function(){
+            if(sideNav.style.right == "-250px"){
+                sideNav.style.right = "0";
+            }else{
+                sideNav.style.right = "-250px"
+            }
+        }
+
+    </script>
 </body>
 </html>
