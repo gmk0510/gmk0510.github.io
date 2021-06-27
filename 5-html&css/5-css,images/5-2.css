@@ -284,12 +284,17 @@ ul{
         width: 100%;
         overflow: hidden;
         transition: 0.5s;
+        text-align: center; /*수정한거*/ 
     }
     nav ul li{
         display: block;
-        margin-right: 50px;
+        margin-right: -20px; /*수정한거*/
+        /* margin-right: 50px; */
         margin-top: 10px;
         margin-bottom: 10px;
+    }
+    nav ul li a:hover::after{
+        width: 100%; /*수정한거*/
     }
     nav ul li a:hover{
         color: #ce6666;
@@ -302,9 +307,9 @@ ul{
         display: block;
         cursor: pointer;
     }
-    nav ul li::after{
+    /* nav ul li::after{
         display: none;
-    }
+    } */
 }
 
 /*-------- media query for less than 600 screen size --------*/
