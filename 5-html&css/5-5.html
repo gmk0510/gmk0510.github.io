@@ -7,14 +7,115 @@
     <link rel="stylesheet" href="5-css,images/5-5.css">
 </head>
 <body>
+    <header>
+        <a href="#" class="logo">Food<span>.</span></a>
+        <ul class="navigation">
+            <li><a href="#banner">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#expert">Expert</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </header>
     <section class="banner" id="banner">
         <div class="content">
             <h2>Always Choose Good</h2>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis sequi 
             optio quaerat doloribus, exercitationem placeat magni blanditiis in v
             Quis sequi quas.</p>
-            <a href="#">Our</a>
+            <a href="#" class="btn">Our Menu</a>
         </div>
     </section>
+
+    <section class="about" id="about">
+        <div class="row">
+            <div class="col50">
+                <h2 class="titleText"><span>A</span>bout Us</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa, 
+                alias, ad repellat sit tempore voluptatibus natus doloribus soluta 
+                dicta, molestias debitis earum explicabo corporis id iusto voluptates 
+                exercitationem deserunt nesciunt beatae iure! Consequatur magnam quidem 
+                libero quas quis aspernatur est! exercitationem deserunt nesciunt 
+                beatae ipsum dolor sit, amet consectetur adipisicing elit.<br /><br />Lorem ipsum 
+                dolor sit, amet consectetur adipisicing elit. Ipsa, 
+                alias, ad repellat sit tempore voluptatibus natus doloribus soluta 
+                dicta, molestias debitis earum dolor sit, amet consectetur 
+                adipisicing elit.</p>
+            </div>
+            <div class="col50">
+                <div class="imgBx">
+                    <img src="5-css,images/5-5images/img1.jpg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="menu" id="menu">
+        <div class="title">
+            <h2 class="titleText">Our<span>M</span>enu</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
+        <div class="content">
+            <div class="box">
+                <div class="imgBx">
+                    <img src="5-css,images/5-5images/menu1.jpg" alt="Salads">
+                </div>
+                <div class="text">
+                    <h3>Special Salads</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="5-css,images/5-5images/menu2.jpg" alt="Soup">
+                </div>
+                <div class="text">
+                    <h3>Special Soup</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="5-css,images/5-5images/menu3.jpg" alt="Soup">
+                </div>
+                <div class="text">
+                    <h3>Special Pasta</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="5-css,images/5-5images/menu4.jpg" alt="Soup">
+                </div>
+                <div class="text">
+                    <h3>Special Salads</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="5-css,images/5-5images/menu5.jpg" alt="Soup">
+                </div>
+                <div class="text">
+                    <h3>Special Soup</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="5-css,images/5-5images/menu6.jpg" alt="Soup">
+                </div>
+                <div class="text">
+                    <h3>Special Pasta</h3>
+                </div>
+            </div>
+        </div>
+        <div class="title">
+            <a href="#" class="btn">View all</a>
+        </div>
+    </section>
+
+    <script> /* ▽ window 즉 이 화면이 scroll 내려질때 아래의 함수를 실행 */
+        window.addEventListener('scroll', function(){ 
+            const header = document.querySelector('header'); 
+            header.classList.toggle("sticky", window.scrollY > 0);
+        }); /* △ header tag에 Y값 즉 상하로 scroll 할 시 class sticky 추가됨 */
+    </script>
 </body>
 </html>
