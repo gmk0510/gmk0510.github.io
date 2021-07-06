@@ -10,6 +10,7 @@
     <!--headear-->
     <header>
         <a href="#" class="logo">Food<span>.</span></a>
+        <div class="menuToggle" onclick="toggleMenu();"></div>
         <ul class="navigation">
             <li><a href="#banner">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -219,12 +220,15 @@
                 <textarea placeholder="Name"></textarea>
             </div>
             <div class="inputBox">
-                <input type="submit" placeholder="Send">
+                <input type="submit" value="Send">
             </div>
         </div>
     </section>
 
-
+    <!--copyright-->
+    <div class="copyrightText">
+        <p>Copyright 2021 <a href="#">Online Tutorials.</a> All Right Reserved</p>
+    </div>
 
 
     <script> /* ▽ window 즉 이 화면이 scroll 내려질때 아래의 함수를 실행 */
@@ -232,6 +236,13 @@
             const header = document.querySelector('header'); 
             header.classList.toggle("sticky", window.scrollY > 0);
         }); /* △ header tag에 Y값 즉 상하로 scroll 할 시 class sticky 추가됨 */
+
+        function toggleMenu(){
+            const menuToggle = document.querySelector('.menuToggle');
+            const navigation = document.querySelector('.navigation');
+            menuToggle.classList.toggle('active');
+            navigation.classList.toggle('active')
+        }
     </script>
 </body>
 </html>

@@ -138,7 +138,7 @@ section{
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* 대체 콘텐츠의 가로세로비를 유지하면서, 요소 콘텐츠 박스를 가득채움. 가로세로비가 일치하지 않으면 일부가 잘려나감 */
+    /* object-fit: cover; 대체 콘텐츠의 가로세로비를 유지하면서, 요소 콘텐츠 박스를 가득채움. 가로세로비가 일치하지 않으면 일부가 잘려나감 */
 }
 .title{
     width: 100%;
@@ -275,6 +275,7 @@ section{
 .contact{
     background: url('5-5images/bg3.jpg');
     background-size: cover;
+    background-position: center;
 }
 .contactForm{
     padding: 75px 50px;
@@ -303,5 +304,82 @@ section{
     outline: none;
     font-size: 16px;
     font-weight: 300;
-    resize: none;
+    resize: none; /* 요소가 크기를 조정할 수 있는지 여부와 이 경우 방향을 설정 */
+}
+.contactForm .inputBox input[type="submit"]{
+    font-size: 1em;
+    color: #fff;
+    background: #ff0157;
+    display: inline-block;
+    text-transform:  uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    max-width: 100px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+}
+.copyrightText{
+    padding: 8px 40px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.copyrightText p{
+    color: #333;
+}
+.copyrightText a{
+    color: #ff0157;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+@media (max-width: 991px){
+    header,
+    header.sticky{
+        padding: 10px 20px;
+    }
+    header .navigation{
+        display: none;
+    }
+    header .navigation.active{
+        width: 100%;
+        height: calc(100% - 68px); /* 안찾아봄 찾아보기 */
+        position: fixed;
+        top: 68px;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: #fff;
+    }
+    header .navigation li{
+        margin-left: 0;
+    }
+    header .navigation li a{
+        text-decoration: none;
+        color: #111;
+        font-size: 1.6em;
+        font-weight: 300;
+    }
+    .menuToggle{
+        position: relative;
+        width: 40px;
+        height: 40px;
+        background: url('5-5images/menu.png');
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+    }
+    .menuToggle.active{
+        background: url('5-5images/close.png');
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    header.sticky .menuToggle{
+        filter: invert(1); /* 색상을 반전시킨다 (0이 기본값) */  
+    }
 }
