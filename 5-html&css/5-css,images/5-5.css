@@ -130,7 +130,8 @@ section{
 .row .col50 .imgBx{
     position: relative;
     width: 100%;
-    min-height: 400px;
+    /* min-height: 400px; */
+    height: 100%;
 }
 .row .col50 .imgBx img{
     position: absolute;
@@ -138,7 +139,7 @@ section{
     left: 0;
     width: 100%;
     height: 100%;
-    /* object-fit: cover; 대체 콘텐츠의 가로세로비를 유지하면서, 요소 콘텐츠 박스를 가득채움. 가로세로비가 일치하지 않으면 일부가 잘려나감 */
+    object-fit: cover; /* 대체 콘텐츠의 가로세로비를 유지하면서, 요소 콘텐츠 박스를 가득채움. 가로세로비가 일치하지 않으면 일부가 잘려나감 */
 }
 .title{
     width: 100%;
@@ -381,5 +382,57 @@ section{
     }
     header.sticky .menuToggle{
         filter: invert(1); /* 색상을 반전시킨다 (0이 기본값) */  
+    }
+    section{
+        padding: 20px;
+    }
+    .banner .content h2{
+        font-size: 3em;
+        color: #fff ;
+    }
+    .row{
+        flex-direction: column;
+    }
+    .row .col50{
+        position: relative;
+        width: 100%;
+    }
+    .row .col50 .imgBx{
+        height: 300px;
+        margin-top: 20px;
+    }
+    .menu .content{
+        margin-top: 20px;
+    }
+    .menu .content .box{
+        margin: 10px;
+    }
+    .menu .content .box .imgBx{
+        height: 260px;
+    }
+    .title{
+        text-align: center;
+    }
+    .titleText{
+        font-size: 1.8em;
+        line-height: 1.5em;
+        margin-bottom: 15px;
+        font-weight: 300;
+    }
+    .testimonials .content .box{
+        margin: 10px;
+        padding: 20px;
+    }
+    .contactForm{
+        padding: 35px 40px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 480px){
+    .banner .content h2{
+        font-size: 2.2em;
+        color: #fff;
     }
 }
