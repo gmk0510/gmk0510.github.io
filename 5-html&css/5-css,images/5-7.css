@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    min-height: 1000px;
+}
+
+/* header */
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 100px;
+    z-index: 1000;
+    transition: 0.5s;
+}
+header.sticky{
+    padding: 5px 100px;
+    background: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+header .logo{
+    position: relative;  /* 왜 쓰는지 이해안감 */
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.5s;
+}
+header ul{
+    position: relative;  /* 왜 쓰는지 이해안감 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header ul li{
+    position: relative;  /* 왜 쓰는지 이해안감 */  
+    list-style: none;
+}
+header ul li a{
+    position: relative;  /* 왜 쓰는지 이해안감 */
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: 300;
+    transition: 0.5s;
+}
+header.sticky .logo,
+header.sticky ul li a{
+    color: #000;
+}
+
+/* banner */
+.banner{
+    position: relative;  /* 왜 쓰는지 이해안감 */
+    width: 100%;
+    min-height: 100vh;
+    background: url('5-7images/bg.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner h2{
+    color: #fff;
+    font-size: 90px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1em;
+    max-width: 1100px;
+}
+.banner h2 span{
+    color: #4978ff;
+}
+
+
+
+
+/* about < sec share */
+.sec{
+    background: #fff;
+    padding: 100px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sec .content{
+    position: relative;  /* 왜 쓰는지 이해안감 */
+    text-align: center;
+    width: 100%;
+}
+.mxw800p{
+    max-width: 800px;
+    margin: 0 auto;
+}
+h3{
+    font-size: 40px;
+    font-weight: 200;
+    margin-bottom: 10px;
+}
+p{
+    position: relative;  /* 왜 쓰는지 이해안감 */
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+.btn{
+    position: relative;  /* 왜 쓰는지 이해안감 */
+    display: inline-block;
+    padding: 10px 30px;
+    background: #000;
+    text-decoration: none;
+    color: #fff;
+}
+
+/* services */
+.services{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 30px;
+    max-width: 100%;
+    margin-top: 40px;
+}
+.services .box{
+    width: 300px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow:  0 15px 30px rgba(0, 0, 0, 0.05);
+    position: relative;
+    z-index: 200;
+}
+.services .box .iconBx{
+    margin-top: 25px;
+}
+.services .box .iconBx img{
+    max-width: 70px;
+    margin-bottom: 15px;
+}
+.services .box h2{
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+/* stats */
+.stats{
+    position: relative;          /* 추가수정 */
+    z-index: 100;                /* 추가수정 */
+    background: #000;  
+    /* padding-top: 349px; */    /* 추가수정 */
+    margin-top: -349px; 
+}
+.stats h3,
+.stats p{
+    color: #fff;
+}
+.statsBox{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    max-width: 100%;
+    margin-top: 40px;
+}
+.statsBox h2{
+    color: #fff;
+    font-size: 36px;
+}
+.statsBox h4{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* portfolio */
+
+/* team */
+
+/* contact */
