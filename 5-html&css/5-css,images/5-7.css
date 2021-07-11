@@ -7,10 +7,6 @@
     scroll-behavior: smooth;
 }
 
-body{
-    min-height: 1000px;
-}
-
 /* header */
 header{
     position: fixed;
@@ -370,6 +366,9 @@ p{
     filter: invert(1);
     max-width: 40px;
 }
+.sci ul li a img:hover{
+    filter: invert(0.5);
+}
 .copyright a{
     color: #fff;
 }
@@ -445,5 +444,38 @@ p{
     header .logo,
     header ul li a{
         color: #000;
+    }
+    .banner{
+        background-position: center;
+    }
+    .banner h2{
+        font-size: 60px;
+        padding: 0 50px;
+    }
+    .sec{
+        padding: 100px 50px 50px 50px;
+    }
+    .services .box{
+        width: 100%;
+    }
+    .stats{
+        padding-top: 250px;
+    }
+    .row100{
+        flex-direction: column;
+    }
+    .contactForm .row100 .inputBx50,
+    .contactForm .row100 .inputBx100{
+        width: 100%;
+        margin: 0;
+    }
+    .sci{
+        margin: 20px;
+    }
+    .sci ul li a img{
+        font-size: 24px;
+    }
+    h3{
+        font-size: 36px;
     }
 }
