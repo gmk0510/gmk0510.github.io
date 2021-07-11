@@ -3,10 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brands | Responsive Website Design make kuminkyu</title>
+    <title>Google Browser-only Website | Responsive Website Design make kuminkyu</title>
     <link rel="stylesheet" href="5-css,images/5-7.css">
 </head>
 <body>
+    <!-- Important notice -->
+    <div id="error">
+        <p>
+            This a Google Browser-only Website.
+
+            <div id="sorry">SSSSSoooooorrrryyy</div>
+        </p>
+        <a href="#" onclick="errorclose()">close</a>
+    </div>
+    
     <!-- Header -->
     <header id="header">
         <a href="#" class="logo">Logo</a>
@@ -264,6 +274,11 @@
         function toggle(){
             var header = document.querySelector("header");
             header.classList.toggle("active")
+        }
+
+        function errorclose(){
+            var error = document.querySelector("#error");
+            error.style.display="none"
         }
     </script>
 </body>
