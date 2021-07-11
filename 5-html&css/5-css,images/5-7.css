@@ -19,9 +19,6 @@
     border: 2px solid black;
     z-index: 200000;
 }
-#error #sorry{
-    padding: 20px;
-}
 #error p{
     padding: 10px;
 }
