@@ -506,6 +506,8 @@ p{
         width: 100%;
         
     }
+}
+@media (max-width: 450px){
     html{
         width: 120%;
     }
