@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio | Responsive Website Design </title>
     <link rel="stylesheet" href="5-css,images/5-8.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <!-- header -->
@@ -12,18 +13,18 @@
         <a href="#" class="logo">Portfolio</a>
         <div class="toggle">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Work</a></li>
-                <li><a href="#">Testimonial</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#testimonial">Testimonial</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </header>
 
     <!-- banner -->
-    <section class="banner">
+    <section class="banner" id="home">
         <div class="textBx">
             <h2>Hello, I'm<br /><span>Minkyu Ku.</span></h2>
             <h3>I'm a Junior Front End Web Developer.</h3>
@@ -32,7 +33,7 @@
     </section>
 
     <!-- about -->
-    <section class="about">
+    <section class="about" id="about">
         <div class="heading">
             <h2>About Me</h2>
         </div>
@@ -57,7 +58,7 @@
     </section>
     
     <!-- services -->
-    <section class="services">
+    <section class="services" id="services">
         <div class="heading white">
             <h2>Our Services</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -103,7 +104,7 @@
     </section>
 
     <!-- work -->
-    <section class="work">
+    <section class="work" id="work">
         <div class="heading">
             <h2>Our Latest Work</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
@@ -127,7 +128,8 @@
         </div>
     </section>
 
-    <section class="testimonial">
+    <!-- testimonial -->
+    <section class="testimonial" id="testimonial">
         <div class="heading">
             <h2>Testimonial</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
@@ -149,6 +151,56 @@
             </div>
         </div>
     </section>
+
+    <!-- contact -->
+    <section class="contact" id="contact">
+        <div class="heading white">
+            <h2>Contact Us</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="content">
+            <div class="contactInfo">
+                <h3>Contact Info</h3>
+                <div class="contactInfoBx">
+                    <div class="box">
+                        <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="text">
+                            <h3>Address</h3>
+                            <p>4671 Sugar Camp Road,<br />Owatonna,Minnesota,<br />55060</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon"><i class="fas fa-phone-alt"></i></div>
+                        <div class="text">
+                            <h3>Phone_fakeNum</h3>
+                            <p>507-455-6012</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon"><i class="far fa-envelope"></i></div>
+                        <div class="text">
+                            <h3>Email-real</h3>
+                            <p>mingu.ku@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="formBx">
+                <form>
+                    <h3>Message Me</h3>
+                    <input type="text" name="" placeholder="Full Name">
+                    <input type="email" name="" placeholder="Email">
+                    <textarea placeholder="Your Message"></textarea>
+                    <input type="submit" value="Send">
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- copyright -->
+    <div class="copyright">
+        <p>Copyright ＠ 2021 Online Tutorials. make kuminkyu.</p>
+    </div>
 
     <!-- javascript -->
     <script>
