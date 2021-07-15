@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuminkyu's Portfolio | Responsive Website Design</title>
+    <link rel="stylesheet" href="5-css,images/5-9.css">
+</head>
+<body>
+    <!-- toggle -->
+    <div class="toggle" onclick="toggleMenu()"></div>
+
+    <section class="banner" id="home">
+        <div class="imgSidebar">
+            <img src="5-css,images/5-9images/bg.jpg">
+        </div>
+        <div class="contentBx">
+            <h5 class="logoText">My_Portfolio</h5>
+            <div>
+                <h4><span>Hello</span> I'm</h4>
+                <h2>Minkyu Ku</h2>
+                <h4>I'm a Front End Web Developer.</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt dolores, obcaecati dolorum 
+                adipisci eveniet repellat dignissimos ratione architecto aliquid quod tenetur nam, asperiores 
+                recusandae, alias veniam commodi repudiandae! Iusto, quasi. Architecto animi facere omnis 
+                repudiandae magni. Totam, ducimus. Earum quis nam labore deserunt alias? Itaque, iste repellendus 
+                mollitia  possimus expedita aut ratione.</p>
+                <a href="#" class="btn">About Me</a>
+            </div>
+            <ul class="sci">
+                <li><a href="#"><img src="5-css,images/5-9images/facebook.png"></a></li>
+                <li><a href="#"><img src="5-css,images/5-9images/twitter.png"></a></li>
+                <li><a href="#"><img src="5-css,images/5-9images/instagram.png"></a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- sidebar -->
+    <div class="sidebar">
+        <ul class="menu">
+            <li><a href="#" onclick="toggleMenu()">Home</a></li>
+            <li><a href="#" onclick="toggleMenu()">About</a></li>
+            <li><a href="#" onclick="toggleMenu()">Services</a></li>
+            <li><a href="#" onclick="toggleMenu()">Work</a></li>
+            <li><a href="#" onclick="toggleMenu()">Contact</a></li>
+        </ul>
+    </div>
+
+
+    <!-- script -->
+    <script>
+        function toggleMenu(){
+            const menuToggle = document.querySelector('.toggle');
+            menuToggle.classList.toggle('active');
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.classList.toggle('active')
+        }
+    </script>
+</body>
+</html>
