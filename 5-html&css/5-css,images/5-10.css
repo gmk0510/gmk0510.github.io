@@ -341,3 +341,133 @@ p{
     grid-gap: 20px;
     margin: 40px 0;
 }
+.testimonials .content .testimonialsBox{
+    background: var(--white2);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+}
+.testimonials .content .testimonialsBox .imgBx{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+.testimonials .content .testimonialsBox .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.testimonials .content .testimonialsBox p{
+    font-style: italic;
+}
+.testimonials .content .testimonialsBox h4{
+    text-align: right;
+    margin-top: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1em;
+    color: var(--black);
+    line-height: 1.2em;
+    font-weight: 600;
+    border-right: 4px solid var(--black);
+    padding-right: 10px;
+}
+.testimonials .content .testimonialsBox h4 span{
+    text-transform: initial;
+    color: #aaa;
+    letter-spacing: 1px;
+    font-weight: 300;
+    font-size: 0.7em;
+}
+
+/* contact */
+.contact{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+.contact .contactForm{
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    margin-top: 20px;
+}
+.contact .contactForm .row{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    margin-top: 20px;
+}
+.contact .contactForm .row2{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.contact .contactForm .row input,
+.contact .contactForm .row2 textarea{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    color: var(--black);
+    background: var(--white2);
+    font-size: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.contact .contactForm .row2 textarea{
+    resize: none;
+    height: 200px;
+}
+.contact .contactForm .row2 input[type="submit"]{
+    background: var(--black2);
+    color: #fff;
+    padding: 10px 30px;
+    display: inline-block;
+    font-weight: 500;
+    letter-spacing: 2px;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+    max-width: 150px;
+    border: none;
+}
+.copyright{
+    position: relative;  /* ? */
+    bottom: 0;
+    padding: 10px 40px;
+    text-align: center;
+}
+
+
+/* Responsive */
+@media (max-width: 992px){
+    .navigation{
+        left: -100%;
+    }
+    .navigation.active{
+        left: 0;
+        width: 100%;
+    }
+    .main{
+        width: 100%;
+        left: 0;
+    }
+    .main.active{
+        left: 100%;
+    }
+    .main .topbar{
+        width: 100%;
+        left: 0;
+    }
+    .main .topbar.active{
+        left: 100%;
+    }
+}
