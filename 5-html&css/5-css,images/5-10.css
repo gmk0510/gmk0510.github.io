@@ -14,6 +14,7 @@
 }
 body{
     overflow-x: hidden;
+    width: 100%;
 }
 .container{
     position: relative;
@@ -30,6 +31,7 @@ body{
     align-items: center;
     overflow: hidden;
     transition: 0.5s;
+    z-index: 2;
 }
 .navigation.active{
     width: 0;
@@ -467,7 +469,64 @@ p{
         width: 100%;
         left: 0;
     }
-    .main .topbar.active{
-        left: 100%;
+    .navigation ul{
+        padding: 20px 20px;
     }
+    .banner .imgBx{
+        width: 250px;
+        height: 250px;
+    }
+    .banner h3,
+    .banner p{
+        text-align: center;
+    }
+    .adjust{
+        padding: 0 20px;
+    }
+
+    /* about */
+    .about .content{
+        flex-direction: column;
+    }
+    .about .content .textBox{
+        width: 100%;
+        max-width: 100%;
+    }
+    .about .content .imgBx{
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    /* servces */
+    .services .content{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .project .content{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+
+    
+}
+@media (max-width: 570px){
+    .services .content{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .project .content{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .testimonials .content{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .contact .contactForm .row{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .contact{
+        margin-bottom: 40px;
+    }
+    .copyright{
+        padding: 10px 20px;
+    }
+    .container .main{position: unset;}
 }

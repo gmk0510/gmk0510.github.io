@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Complete Responsive Portfolio Website</title>
     <link rel="stylesheet" href="5-css,images/5-10.css">
@@ -12,12 +11,12 @@
     <div class="container">
         <div class="navigation">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#banner" onclick="toggleMenu()">Home</a></li>
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#services" onclick="toggleMenu()">Services</a></li>
+                <li><a href="#portfolio" onclick="toggleMenu()">Portfolio</a></li>
+                <li><a href="#testimonials" onclick="toggleMenu()">Testimonials</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
             </ul>
         </div>
         <div class="main">
@@ -293,6 +292,15 @@
             topbar.classList.toggle('active');
             navigation.classList.toggle('active');
             main.classList.toggle('active');
+        }
+
+        //fix menu active for mobile devices
+        function toggleMenu(){
+            let navigation = document.querySelector('.navigation');
+            let main = document.querySelector('.main');
+
+            navigation.classList.remove('active');
+            main.classList.remove('active');
         }
     </script>
 </body>
