@@ -14,10 +14,11 @@
                 <li><a href="#banner" onclick="toggleMenu()">Home</a></li>
                 <li><a href="#about" onclick="toggleMenu()">About</a></li>
                 <li><a href="#services" onclick="toggleMenu()">Services</a></li>
-                <li><a href="#portfolio" onclick="toggleMenu()">Portfolio</a></li>
+                <li><a href="#project" onclick="toggleMenu()">Portfolio</a></li>
                 <li><a href="#testimonials" onclick="toggleMenu()">Testimonials</a></li>
                 <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
             </ul>
+            <div class="themeSwitch"></div>
         </div>
         <div class="main">
             <div class="topbar">
@@ -301,6 +302,14 @@
 
             navigation.classList.remove('active');
             main.classList.remove('active');
+        }
+
+        // dark, light mode
+        let themeSwitch = document.querySelector('.themeSwitch');
+        let body = document.querySelector('body');
+
+        themeSwitch.onclick = function(){
+            body.classList.toggle('dark');
         }
     </script>
 </body>

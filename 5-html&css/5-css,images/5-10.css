@@ -12,6 +12,12 @@
     --white: #fff;
     --white2: #fff;
 }
+.dark{
+    --black: #fff;
+    --black2: #444;
+    --white: #333;
+    --white2: #444;
+}
 body{
     overflow-x: hidden;
     width: 100%;
@@ -32,6 +38,9 @@ body{
     overflow: hidden;
     transition: 0.5s;
     z-index: 2;
+}
+.dark .navigation{
+    border-right: 1px solid rgba(0, 0, 0, 0.5);
 }
 .navigation.active{
     width: 0;
@@ -91,6 +100,9 @@ body{
     align-items: center;
     z-index: 10000;
     transition: 0.5s;
+}
+.dark .main .topbar{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
 .main .topbar.active{
     width: calc(100% - 0px);  /* === width: 100% */
@@ -161,6 +173,9 @@ h3{
 p{
     color: #777;
 }
+.dark p{
+    color: var(--black);
+}
 /* btn share */
 .btn{
     position: relative;  /* ? */
@@ -175,6 +190,9 @@ p{
     transition: 0.5s;
 }
 .btn:hover{box-shadow: 0 -45px 0 black inset;}
+.dark .btn:hover{
+    box-shadow: 0 -45px 0 rgb(55, 182, 233) inset; 
+}
 .socialMedia{
     position: absolute;  /* ? */
     bottom: 20px;
@@ -199,6 +217,9 @@ p{
 .socialMedia li a:hover{
     background: var(--black2);
     color: var(--white2);
+}
+.dark .socialMedia li a:hover{
+    background: #2196f3;
 }
 
 /* share === about, services, project */
@@ -266,8 +287,14 @@ p{
     justify-content: center;
     align-items: center;
 }
+.dark .services .content .serviceBox{
+    background: #2196f3;
+}
 .services .content .serviceBox img{
     max-width: 50px;
+}
+.dark .services .content .serviceBox img{
+    filter: invert(1);
 }
 .services .content .serviceBox h2{
     font-size: 1.1em;
@@ -334,6 +361,9 @@ p{
 .project .content .workBx .textBx h3{
     color: #fff;
     font-size: 1em;
+}
+.dark .project .content .workBx:hover .textBx{
+    background: #777;
 }
 
 /* testimonals */
@@ -509,7 +539,7 @@ p{
 
     
 }
-@media (max-width: 570px){
+@media (max-width: 650px){
     .services .content{
         grid-template-columns: repeat(1, 1fr);
     }
@@ -529,4 +559,49 @@ p{
         padding: 10px 20px;
     }
     .container .main{position: unset;}
+}
+
+
+/* Dark and Light mode switch */
+.themeSwitch{
+    position: absolute;
+    bottom: 20px;
+    left: 40px;
+    width: 30px;
+    height: 30px;
+    background: var(--black);
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+}
+.themeSwitch::before{
+    content: '\f186';
+    font-family: fontAwesome;
+}
+.dark .themeSwitch::before{
+    content: '\f185';
+    font-family: fontAwesome;
+}
+.themeSwitch::after{
+    content: 'Switch To Dark Mode';
+    position: absolute;
+    left: 40px;
+    font-size: 0.7em;
+    color: var(--black);
+    white-space: nowrap;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+.dark .themeSwitch::after{
+    content: 'Switch To Light Mode';
+    position: absolute;
+    left: 40px;
+    font-size: 0.7em;
+    color: var(--black);
+    white-space: nowrap;
+    font-weight: 300;
+    letter-spacing: 1px;
 }
