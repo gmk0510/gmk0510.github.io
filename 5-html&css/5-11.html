@@ -12,14 +12,14 @@
     <!-- Nav Bar -->
     <header>
         <a href="#" class="logo">Food<span>.</span></a>
-        <div class="toggle"></div>
+        <div class="toggle" onclick="toggleMenu();"></div>
         <ul class="menu" id="myTopnav">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Menu</a></li>
-            <li><a href="#">Popular</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#home" onclick="toggleMenu();">Home</a></li>
+            <li><a href="#menu" onclick="toggleMenu();">Menu</a></li>
+            <li><a href="#popular" onclick="toggleMenu();">Popular</a></li>
+            <li><a href="#" onclick="toggleMenu();">About</a></li>
+            <li><a href="#" onclick="toggleMenu();">Gallery</a></li>
+            <li><a href="#" onclick="toggleMenu();">Contact</a></li>
         </ul>
     </header>
 
@@ -33,7 +33,105 @@
         <img src="5-css,images/5-11images/banner.jpg">
     </section>
 
+    <!-- Social Media -->
+    <ul class="social">
+        <li class="sc-item">
+            <a href="#" class="sc-link">
+                <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                <span class="name">Facebook</span>
+            </a>
+        </li>
+        <li class="sc-item">
+            <a href="#" class="sc-link">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+                <span class="name">Twitter</span>
+            </a>
+        </li>
+        <li class="sc-item">
+            <a href="#" class="sc-link">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+                <span class="name">Instagram</span>
+            </a>
+        </li>
+        <li class="sc-item">
+            <a href="#" class="sc-link">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                <span class="name">Next</span>
+            </a>
+        </li>
+    </ul>
 
+    <!-- menu -->
+    <section class="item_menu" id="menu">
+        <div class="card">
+            <div class="icon"><i class="fa fa-star" aria-hidden="true"></i></div>
+            <h4>Organic Food</h4>
+            <h5>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h5>
+            <a href="#">View more</a>
+        </div>
+        <div class="card">
+            <div class="icon"><i class="fa fa-hand-rock-o" aria-hidden="true"></i></div>
+            <h4>Top Chefs</h4>
+            <h5>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h5>
+            <a href="#">View more</a>
+        </div>
+        <div class="card">
+            <div class="icon"><i class="fa fa-heart" aria-hidden="true"></i></div>
+            <h4>Nice Exporise</h4>
+            <h5>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h5>
+            <a href="#">View more</a>
+        </div>
+    </section>
+
+    <!-- Popular Items -->
+    <section class="popular_items" id="popular">
+        <div class="info">
+            <h2>What's special today?</h2>
+            <h5>Today special and popualr items <a href="#">View menu</a></h5>
+        </div>
+        <div class="itemBx">
+            <div class="box">
+                <img src="5-css,images/5-11images/item1.jpg">
+                <div class="infoBx">
+                    <h4>Special Item1</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque sequi delectus 
+                    amet tempore!</p>
+                    <h5>$10.00</h5>
+                    <a href="#">Order Now</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="5-css,images/5-11images/item2.jpg">
+                <div class="infoBx">
+                    <h4>Special Item2</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque sequi delectus 
+                    amet tempore!</p>
+                    <h5>$15.00</h5>
+                    <a href="#">Order Now</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="5-css,images/5-11images/item3.jpg">
+                <div class="infoBx">
+                    <h4>Special Item3</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque sequi delectus 
+                    amet tempore!</p>
+                    <h5>$20.00</h5>
+                    <a href="#">Order Now</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="5-css,images/5-11images/item4.jpg">
+                <div class="infoBx">
+                    <h4>Special Item4</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque sequi delectus 
+                    amet tempore!</p>
+                    <h5>$10.00</h5>
+                    <a href="#">Order Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
     <!-- script === scrollEvent -->
@@ -45,7 +143,7 @@
         });
 
         function toggleMenu(){
-            var menuToggle = document.querySelector('toggle');
+            var menuToggle = document.querySelector('.toggle');
             var menu = document.querySelector('.menu');
 
             menuToggle.classList.toggle('active');
