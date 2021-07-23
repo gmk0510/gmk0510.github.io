@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    background: #fafafa;
+    overflow-x: hidden;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+}
+header .logo{
+    color: #000;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+header .logo span{
+    color: #e6080d;
+}
+header ul{
+    position: relative;  /* ? */
+    display: flex;
+}
+header ul li{
+    position: relative;  /* ? */
+    list-style: none;
+}
+header ul li a{
+    position: relative;  /* ? */
+    display: inline-block;
+    margin: 0 15px;
+    color: #dfdce3;
+    padding: 10px 30px;
+    text-decoration: none;
+    transition: 0.5s;
+    border-radius: 5px;
+}
+header ul li a:hover{
+    background: red;
+    color: #fff;
+}
+
+/* banner */
+.banner{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner .info{
+    position: relative;
+    padding: 70px;
+    margin-left: 30px;
+    width: 40%;
+    height: 100%;
+}
+.banner .info h2{
+    font-size: 3rem;
+    font-weight: 500;
+}
+.banner .info span{
+    color: #e6080d;
+}
+.banner .info h5{
+    font-size: 1rem;
+}
+.banner .info a{
+    font-size: 1em;
+    color: #fff;
+    background: #e6080d;
+    display: inline-block;
+    padding: 10px 30px;
+    margin-top: 20px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    border-radius: 5px;
+    box-shadow: 4px 2px 10px #e6080d;
+}   
+.banner .info a:hover{
+    transform: scale(0.9);
+}
+.banner img{
+    position: relative;
+    width: 60%;
+    min-height: 100vh;
+    object-fit: cover;
+    border-bottom-left-radius: 100px;
+}
