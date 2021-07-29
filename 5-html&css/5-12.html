@@ -12,10 +12,57 @@
     <link rel="stylesheet" href="5-css,images/5-12.css">
 </head>
 <body>
+    <!-- header -->
+    <header>
+        <div class="container">
+            <nav class="nav">
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                    <i class="fas fa-times"></i>
+                </div>
+                <a href="#" class="logo"><img src="5-css,images/5-12images/logo-rosa.png" alt="logo"></a>
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#menu" class="nav-link">Menu</a></li>
+                    <li class="nav-item"><a href="#reservations" class="nav-link">Reservations</a></li>
+                    <li class="nav-item"><a href="#news" class="nav-link">News</a></li>
+                    <li class="nav-item"><a href="#shop" class="nav-link">Shop</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- hero home -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <h2 class="sub-headline"><span class="first-letter">W</span>elcome</h2>
+            <h1 class="headline">The Rosa</h1>
+            <div class="headline-description">
+                <div class="separator">
+                    <div class="line line-left"></div>
+                    <div class="asterisk"><i class="fas fa-asterisk"></i></div>
+                    <div class="line line-right"></div>
+                </div>
+                <div class="single-animation">
+                    <h5>Ready to be opened</h5>
+                    <a href="#" class="btn cta-btn"></a>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
 
-    <script src="main.js"></script>
+
+    <script>
+        let menuToggle = document.querySelector('.menu-toggle');
+        let body = document.querySelector('body');
+
+        menuToggle.addEventListener('click', function(){
+            body.classList.toggle('open');
+        });
+    </script>
 </body>
 </html>
 
