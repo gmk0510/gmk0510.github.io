@@ -165,5 +165,138 @@ header{
     max-width: 8.4rem;
     height: .25rem;
     background: #fff;
-    position: relative;
+    position: relative;  /* .line-right,.line-left ::before */
+}
+.line-right::before,
+.line-left::before{
+    content: '';
+    position: absolute;  /* .line */
+    top: 50%;
+    transform: translateY(-50%);
+    border: .6rem solid transparent;
+}
+.line-right::before{
+    border-right-color: #fff;
+    right: 0;
+}
+.line-left::before{
+    border-left-color: #fff;
+    left: 0;
+}
+.asterisk{
+    font-size: 1.2rem;
+    color: var(--secondary-font-color);
+    margin: 0 1.6rem;
+}
+.headline-description h5{
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+    letter-spacing: 3px;
+    margin-right: -3px;
+}
+.btn{
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: -2px;
+}
+.cta-btn{
+    font-size: 1.1rem;
+    background: #fff;
+    padding: .9rem 1.8rem;
+    color: var(--body-font-color);
+    border-radius: .4rem;
+    transition: .5s;
+}
+.cta-btn:hover,
+.cta-btn:focus{
+    color: #fff;
+    background: var(--secondary-font-color);
+}
+
+/* discover */
+.global-headline{
+    text-align: center;
+    margin-top: 3.9rem;
+}
+.discover-our-story .global-headline{
+    margin-top: 6.9rem;
+}
+.global-headline .asterisk{
+    color: var(--body-font-color);
+    margin: 2.4rem 0;
+}
+.headline-dark{
+    color: var(--main-font-color-dark);
+    letter-spacing: .7rem;
+    margin-right: -.7rem;
+}
+.global-headline .sub-headline{
+    letter-spacing: -1px;
+    line-height: .42;
+}
+.restaurant-info{
+    text-align: center;
+}
+.retaurant-description{
+    margin-bottom: 3rem;
+}
+.retaurant-description p{
+    line-height: 1.6;
+    margin-bottom: 2.4rem;
+}
+.body-btn{
+    font-size: 1.5rem;
+    color: var(--secondary-font-color);
+    position: relative;  /* .body-btn::before */
+    transition: .5s;
+}
+.body-btn::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 2px;
+    background: var(--secondary-font-color);
+    transition: .5s;
+}
+.body-btn:hover,
+.body-btn:focus{
+    color: var(--main-font-color-dark);
+}
+.body-btn:hover::before,
+.body-btn:focus::before{
+    background: var(--main-font-color-dark);
+}
+
+/* tasteful */
+.tasteful-recipes{
+    background: url(5-12images/tasteful-recipes.jpg) center no-repeat;
+    background-size: cover;
+}
+.between{
+    min-height: 65vh;
+    display: flex;
+    align-items: center;
+}
+
+/* discover menu */
+.image-group{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5rem;
+}
+.discover-our-menu .restaurant-description{
+    padding-top: 3rem;
+    margin-bottom: 0;
+}
+
+/* perfect blend */
+.perfect-blend{
+    background: url(5-12images/perfect-blend.jpg) center no-repeat;
+    background-size: cover;
 }
