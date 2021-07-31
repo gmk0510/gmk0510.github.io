@@ -21,6 +21,9 @@ html{
     color: var(--body-font-color);
     scroll-behavior: smooth;
 }
+body{
+    overflow-x: hidden;
+}
 section{
     padding: 3.9rem 0;
 }
@@ -170,6 +173,9 @@ header{
     height: .25rem;
     background: #fff;
     position: relative;  /* .line-right,.line-left ::before */
+    opacity: 0;
+    animation: grow 2s forwards;
+    animation-delay: .9s;
 }
 .line-right::before,
 .line-left::before{
@@ -178,6 +184,9 @@ header{
     top: 50%;
     transform: translateY(-50%);
     border: .6rem solid transparent;
+    opacity: 0;
+    animation: grow .5s forwards;
+    animation-delay: 1.2s;
 }
 .line-right::before{
     border-right-color: #fff;
@@ -191,6 +200,14 @@ header{
     font-size: 1.2rem;
     color: var(--secondary-font-color);
     margin: 0 1.6rem;
+    opacity: 0;
+    animation: spin .5s forwards;
+    animation-delay: .7s;
+}
+.single-animation{
+    opacity: 0;
+    animation: fadeDown .5s forwards;
+    animation-delay: 1.5s;
 }
 .headline-description h5{
     color: #fff;
@@ -328,6 +345,7 @@ footer{
     color: #fff;
     font-size: 2rem;
     padding: 2rem;
+    animation: up 2s;
 }
 .footer-content{
     overflow: hidden;
@@ -491,7 +509,7 @@ footer{
     }
 }
 
-/* 줄 */
+/* .headline 152줄 */
 @keyframes scale{
     0%{
         transform: scale(2);
@@ -499,5 +517,52 @@ footer{
     100%{
         opacity: 1;
         transform: scale(1);
+    }
+}
+
+/* .line 170줄 */
+@keyframes grow{
+    0%{
+        width: 0;
+    }
+    100%{
+        opacity: 1;
+        width: 100%;
+    }
+}
+
+/* .asterisk 199줄 */
+@keyframes spin{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        opacity: 1;
+        transform: rotate(-360deg);
+    }
+}
+
+/* .single-animation 204줄 */
+@keyframes fadeDown{
+    0%{
+        transform: translateY(-1rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* .back-to-top i 343줄 */
+@keyframes up{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(-1rem);
     }
 }

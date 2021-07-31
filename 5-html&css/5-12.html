@@ -146,8 +146,8 @@
                     <a href="#" class="btn body-btn">Make a reservation</a>
                 </div>
                 <div class="image-group">
-                    <img class="animation-top" src="5-css,images/5-12images/delight-group-1.jpg">
-                    <img class="animation-bottom" src="5-css,images/5-12images/delight-group-2.jpg">
+                    <img class="animate-top" src="5-css,images/5-12images/delight-group-1.jpg">
+                    <img class="animate-bottom" src="5-css,images/5-12images/delight-group-2.jpg">
                 </div>
             </div>
         </div>
@@ -210,6 +210,37 @@
 
         menuToggle.addEventListener('click', function(){
             body.classList.toggle('open');
+        });
+
+        // Scroll reveal
+        window.sr = ScrollReveal();
+
+        sr.reveal('.animate-left', {
+            origin: 'left',
+            duration: 1000,
+            distance: '25rem',
+            delay: 300
+        });
+        
+        sr.reveal('.animate-right', {
+            origin: 'right',
+            duration: 1000,
+            distance: '25rem',
+            delay: 300
+        });
+
+        sr.reveal('.animate-top', {
+            origin: 'top',
+            duration: 1000,
+            distance: '25rem',
+            delay: 300
+        });
+
+        sr.reveal('.animate-bottom', {
+            origin: 'bottom',
+            duration: 1000,
+            distance: '25rem',
+            delay: 300
         });
     </script>
 </body>
