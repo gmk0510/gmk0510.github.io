@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="5-css,images/5-13.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <a href="#" class="logo">My Blog</a>
+        <div class="menuToggle"></div>
+    </header>
+    <ul class="navigation">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Post</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+
+    <!-- banner -->
+    <section class="banner" id="home">
+        <img src="5-css,images/5-13images/banner.jpg" class="cover">
+        <div class="contentBx">
+            <h2>The soul of the world</h2>
+            <h4>A simple blog website</h4>
+            <a href="#" class="btn">About us</a>
+        </div>
+    </section>
+
+    <script>
+        const menuToggle = document.querySelector('.menuToggle');
+        const navigation = document.querySelector('.navigation');
+        menuToggle.onclick = function(){
+            menuToggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+
+        window.addEventListener('scroll', function(){
+            const header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 0);
+        })
+    </script>
+</body>
+</html>
