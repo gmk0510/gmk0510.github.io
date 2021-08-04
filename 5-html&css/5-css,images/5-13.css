@@ -225,9 +225,9 @@ p{
     height: 400px;
     margin-top: 20px;
 }
-.post .contentBx .postColumn .postBox.extraHeight{
-    /* height: 600px; */
-}
+/* .post .contentBx .postColumn .postBox.extraHeight{
+    height: 600px;
+} */
 .post .contentBx .postColumn .postBox .textBx{
     position: absolute;
     top: 0;
