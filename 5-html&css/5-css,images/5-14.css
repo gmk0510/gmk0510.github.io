@@ -85,3 +85,123 @@ body{
     background: var(--body-color);
     color: var(--text-color);
 }
+h1,h2,h3{
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+    font-family: var(--title-font);
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+img,
+video{
+    max-width: 100%;
+    height: auto;
+}
+button,
+input{
+    border: none;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+}
+button{
+    cursor: pointer;
+}
+input{
+    outline: none;
+}
+
+/* REUSABLE css classes */
+.section{
+    padding: 4.5rem 0 2.5rem;  /* 4.5rem상 0우 2.5rem하 0좌 */
+}
+.section__title{
+    font-size: var(--h2-font-size);
+    color: var(--title-color);
+    text-align: center;
+    text-transform: capitalize;  /* 단어의 첫번째 글자 대문자로 */
+    margin-bottom: var(--mb-2);
+}
+.container{
+    max-width: 968px;
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+}
+.grid{
+    display: grid;
+    gap: 1.5rem;
+}
+
+/* header */
+.header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+    background: var(--first-color);
+}
+
+/* nav */
+.nav{
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav__logo,
+.nav__toggle{
+    color: var(--white-color);
+}
+.nav__logo{
+    font-weight: var(--font-semi-bold);
+}
+.nav__toggle{
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.nav__menu{
+    position: relative;
+}
+
+@media screen and (max-width: 767px){
+    .nav__menu{
+        position: fixed;
+        background: var(--body-color);
+        top: 0;
+        right: -100%;  /* === -70% width value */
+        width: 70%;
+        height: 100%;
+        box-shadow: -1px 0 4px hsla(var(--hue-color), 64%, 15%, .15);
+        padding: 3rem;
+        transition: .4s;
+    }
+}
+
+.nav__list{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.5rem;
+}
+.nav__link{
+    color: var(--text-color-light);
+    font-weight: var(--font-semi-bold);
+    text-transform: uppercase;
+}
+.nav__link:hover{
+    color: var(--text-color);
+}
+.nav__close{
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    color: var(--title-color);
+    cursor: pointer;
+}
+.show-menu{
+    right: 0;
+}
