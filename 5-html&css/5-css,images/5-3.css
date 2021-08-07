@@ -7,8 +7,7 @@ body{
 }
 #header{
     height: 100vh;
-    background-image: url(5-3images/background.png);
-    background-position: center;
+    background: url(5-3images/background.png) center no-repeat;
     background-size: cover;
 }
 .container{
@@ -382,7 +381,8 @@ button{
     transition: 0.5s;
 }
 button:hover{
-    background: coral;
+    background: #f67c92;
+    color: #fff;
 }
 #sideNav ul li a{
     transition: 0.5s;
