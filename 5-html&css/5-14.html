@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="5-css,images/5-14.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <title>Document</title>
+    <!-- swiper css -->
+    <link rel="stylesheet" href="5-css,images/5-14css/swiper-bundle.min2.css">
 </head>
 <body>
     <header class="header" id="header">
@@ -88,7 +90,7 @@
                         <img src="5-css,images/5-14images/about1.jpg" class="about__img-one">
                     </div>
                     <div class="about__img-overlay">
-                        <img src="5-css,images/5-14images/about2.jpg" class="about__img-one">
+                        <img src="5-css,images/5-14images/about2.jpg" class="about__img-two">
                     </div>
                 </div>
             </div>
@@ -96,13 +98,78 @@
 
         <!-- discover -->
         <section class="discover section" id="discover">
+            <h2 class="section__title">Discover the most <br /> slide shows</h2>
 
+            <div class="discover__container container swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="discover__card swiper-slide">
+                        <img src="5-css,images/5-14images/discover1.jpg" class="discover__img">
+                        <div class="discover__data">
+                            <h2 class="discover__title">Bali</h2>
+                            <span class="discover__description">24 tours available</span>
+                        </div>
+                    </div>
+                    <div class="discover__card swiper-slide">
+                        <img src="5-css,images/5-14images/discover2.jpg" class="discover__img">
+                        <div class="discover__data">
+                            <h2 class="discover__title">Hawaii</h2>
+                            <span class="discover__description">15 tours available</span>
+                        </div>
+                    </div>
+                    <div class="discover__card swiper-slide">
+                        <img src="5-css,images/5-14images/discover3.jpg" class="discover__img">
+                        <div class="discover__data">
+                            <h2 class="discover__title">Hvar</h2>
+                            <span class="discover__description">18 tours available</span>
+                        </div>
+                    </div>
+                    <div class="discover__card swiper-slide">
+                        <img src="5-css,images/5-14images/discover4.jpg" class="discover__img">
+                        <div class="discover__data">
+                            <h2 class="discover__title">Whitehaven</h2>
+                            <span class="discover__description">32 tours available</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- experience -->
+        <section class="experience section">
+            <h2 class="section__title">With Our Experience <br /> We Will Serve You</h2>
+
+            <div class="experience__container container grid">
+                <div class="experience__content grid">
+                    <div class="experience__data">
+                        <h2 class="experience__number">20</h2>
+                        <span class="experience__description">Year <br />Experience</span>
+                    </div>
+
+                    <div class="experience__data">
+                        <h2 class="experience__number">75</h2>
+                        <span class="experience__description">Complete <br />tours</span>
+                    </div>
+
+                    <div class="experience__data">
+                        <h2 class="experience__number">650+</h2>
+                        <span class="experience__description">Tourist <br />Destination</span>
+                    </div>
+                </div>
+
+                <div class="experience__img grid">
+                    <div class="experience__overlay">
+                        <img src="5-css,images/5-14images/experience1.jpg" class="experience__img-one">
+                    </div>
+
+                    <div class="experience__overlay">
+                        <img src="5-css,images/5-14images/experience2.jpg" class="experience__img-two">
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
-
-
-
+    
 
 
 
@@ -138,7 +205,29 @@
 
             if(this.scrollY >= 100) header.classList.add('scroll-header'); else header.classList.remove('scroll-header')
         }
-        window.addEventListener('scroll', scrollHeader)
+        window.addEventListener('scroll', scrollHeader);
+    </script>
+
+
+    <!-- Swiper JS -->
+    <script src="5-css,images/5-14js/swiper-bundle.min2.js"></script>
+    <!-- discover swiper -->
+    <script>
+        var swiper = new Swiper(".discover__container", {
+          effect: "coverflow",
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: "auto",
+          loop: true,
+          spaceBetween: -100,
+          coverflowEffect: {
+            rotate: 0,
+            stretch: 0,
+            // depth: 420,
+            modifier: 20,
+            slideShadows: false,
+          }
+        });
     </script>
 </body>
 </html>
