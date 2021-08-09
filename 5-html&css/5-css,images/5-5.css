@@ -274,9 +274,9 @@ section{
 
 /*--contact--*/
 .contact{
-    background: url('5-5images/bg3.jpg');
+    background: url('5-5images/bg3.jpg') center no-repeat;
     background-size: cover;
-    background-position: center;
+    /* background-position: center; */
 }
 .contactForm{
     padding: 75px 50px;
@@ -341,11 +341,21 @@ section{
         padding: 10px 20px;
     }
     header .navigation{
-        display: none;
+        transition: .5s;
+        width: 100%;
+        height: calc(100% - 68px);
+        position: fixed;
+        top: 100%;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: #fff;
     }
     header .navigation.active{
         width: 100%;
-        height: calc(100% - 68px); /* 안찾아봄 찾아보기 */
+        height: calc(100% - 68px);
         position: fixed;
         top: 68px;
         left: 0;
