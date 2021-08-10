@@ -91,10 +91,9 @@
     letter-spacing: 1px;
 }
 .about .imgBx{
-    background: url('5-6images/window.jpg');
+    background: url('5-6images/window.jpg') center no-repeat;
     width: 50%;
     background-size: cover;
-    background-position: center;
     /* object-fit: cover; */
 }
 
