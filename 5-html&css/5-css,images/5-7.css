@@ -6,32 +6,6 @@
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
 }
-
-/* error */
-#error{
-    width: 50%;
-    height: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    background: #fff;
-    border: 2px solid black;
-    z-index: 200000;
-}
-#error p{
-    padding: 10px;
-}
-#error a{
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    text-decoration: none;
-    color: #000;
-    font-size: 20px;
-}
-
-/* header */
 header{
     position: fixed;
     top: 0;
@@ -42,41 +16,41 @@ header{
     align-items: center;
     padding: 40px 100px;
     z-index: 1000;
-    transition: 0.5s;
+    transition: .6s;
 }
 header.sticky{
     padding: 5px 100px;
     background: #fff;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
 }
 header .logo{
-    position: relative;  /* 왜 쓰는지 이해안감 */
+    position: relative;  /* ? */
     font-weight: 700;
     color: #fff;
     text-decoration: none;
     font-size: 2em;
     text-transform: uppercase;
     letter-spacing: 2px;
-    transition: 0.5s;
+    transition: .6s;
 }
 header ul{
-    position: relative;  /* 왜 쓰는지 이해안감 */
+    position: relative;  /* ? */
     display: flex;
-    justify-content: center;
+    justify-content: center; 
     align-items: center;
 }
 header ul li{
-    position: relative;  /* 왜 쓰는지 이해안감 */  
+    position: relative;  /* ? */
     list-style: none;
 }
 header ul li a{
-    position: relative;  /* 왜 쓰는지 이해안감 */
+    position: relative;  /* ? */
     margin: 0 15px;
     text-decoration: none;
     color: #fff;
     letter-spacing: 2px;
     font-weight: 300;
-    transition: 0.5s;
+    transition: .6s;
 }
 header.sticky .logo,
 header.sticky ul li a{
@@ -85,10 +59,10 @@ header.sticky ul li a{
 
 /* banner */
 .banner{
-    position: relative;  /* 왜 쓰는지 이해안감 */
+    position: relative;
     width: 100%;
     min-height: 100vh;
-    background: url('5-7images/bg.jpg');
+    background: url(5-7images/bg.jpg);
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -100,16 +74,12 @@ header.sticky ul li a{
     text-transform: uppercase;
     text-align: center;
     line-height: 1em;
-    max-width: 1100px;
 }
 .banner h2 span{
     color: #4978ff;
 }
 
-
-
-
-/* about < sec share */
+/* sec, content, mxw-800p, h3, p, btn */
 .sec{
     background: #fff;
     padding: 100px;
@@ -119,7 +89,7 @@ header.sticky ul li a{
     align-items: center;
 }
 .sec .content{
-    position: relative;  /* 왜 쓰는지 이해안감 */
+    position: relative;  /* ? */
     text-align: center;
     width: 100%;
 }
@@ -133,24 +103,23 @@ h3{
     margin-bottom: 10px;
 }
 p{
-    position: relative;  /* 왜 쓰는지 이해안감 */
+    position: relative;  /* ? */
     font-size: 18px;
     font-weight: 300;
     margin-bottom: 20px;
     letter-spacing: 1px;
 }
 .btn{
-    position: relative;  /* 왜 쓰는지 이해안감 */
+    position: relative;  /* ? */
     display: inline-block;
     padding: 10px 30px;
     background: #000;
     text-decoration: none;
     color: #fff;
 }
-
 /* services */
 .services{
-    position: relative;
+    position: relative;  /* ? */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 30px;
@@ -162,9 +131,7 @@ p{
     margin: 0 auto;
     background: #fff;
     padding: 20px;
-    box-shadow:  0 15px 30px rgba(0, 0, 0, 0.05);
-    position: relative;
-    z-index: 200;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .05);
 }
 .services .box .iconBx{
     margin-top: 25px;
@@ -179,23 +146,19 @@ p{
     text-transform: uppercase;
     font-weight: 700;
 }
-
-/* stats */
 .stats{
-    position: relative;          /* 추가수정 */
-    z-index: 100;                /* 추가수정 */
-    background: #000;  
-    /* padding-top: 349px; */    /* 추가수정 */
-    margin-top: -349px; 
+    background: #000;
+    padding-top: 250px;
+    margin-top: -250px;
 }
 .stats h3,
 .stats p{
     color: #fff;
 }
 .statsBox{
-    position: relative;
+    position: relative;  /* ? */
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 20px;
     max-width: 100%;
     margin-top: 40px;
@@ -209,23 +172,23 @@ p{
     font-size: 16px;
     font-weight: 500;
     text-transform: uppercase;
-    letter-spacing: 2px;
 }
+.about{margin-bottom: -400px;}
 
 /* portfolio */
 .workBx{
-    position: relative;  /* 왜 쓰는지 이해안감 */
+    position: relative;  /* ? */
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 30px;
     max-width: 100%;
     margin-top: 40px;
 }
 .workBx .brand{
-    position: relative;  /* 왜 쓰는지 이해안감 */
+    position: relative;  /* ? */
     background: #4978ff;
-    min-height: 350px;
-    width: 350px;
+    min-height: 300px;
+    width: 250px;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -236,7 +199,7 @@ p{
 }
 .workBx .brand a{
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.4);
+    color: rgba(255, 255, 255, .4);
     text-transform: uppercase;
     font-size: 14px;
     letter-spacing: 2px;
@@ -245,313 +208,29 @@ p{
     color: rgba(255, 255, 255, 1);
 }
 
-/* team */
-.teamBx{
-    position: relative;  /* 왜 쓰는지 이해안감 */
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 30px;
-    max-width: 100%;
-    margin-top: 40px;
-}
-.teamBx .member{
-    position: relative;  /* 왜 쓰는지 이해안감 */
-    background: #000;
-    min-height: 350px;
-    width: 300px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.teamBx .member .imgBx{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-.teamBx .member .imgBx img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.teamBx .member .details{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #000;
-    transition: 0.5s;
-    opacity: 0;
-}
-.teamBx .member:hover .details{
-    opacity: 1;
-}
-.teamBx .member .details h2{
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 20px;
-    letter-spacing: 1px;
-}
-.teamBx .member .details h2 span{
-    display: block;
-    font-size: 12px;
-    font-weight: 300;
-}
 
-/* contact */
-.contact{
-    background: #000;
-}
-.contact h3,
-.contact  p{
-    color: #fff;
-}
-.contactForm{
-    position: relative;  /* 왜 쓰는지 이해안감 */
-    max-width: 800px;
-    margin: 0 auto;
-    display: flex;
-}
-.contactForm form{
-    width: 100%;
-}
-.contactForm .row100{
-    display: flex;
-    width: 100%;
-}
-.contactForm .row100 .inputBx50{
-    width: 50%;
-    margin: 0 20px;
-}
-.contactForm .row100 .inputBx100{
-    width: 100%;
-    margin: 0 20px;
-}
-.contactForm .row100 input,
-.contactForm .row100 textarea{
-    position: relative;  /* 왜 쓰는지 이해안감 */
-    border: none;
-    border-bottom: 1px solid #fff;
-    color: #fff;
-    background: transparent;
-    /* background: rgba(0, 0, 0, 0); 위와 동일 */
-    width: 100%;
-    outline: none;  /* 이거안하면 클릭시 outline 이 보임 */
-    font-size: 18px;
-    font-weight: 300;
-    margin: 20px 0;
-    resize: none;
-}
-.contactForm .row100 textarea{
-    height: 100px;
-}
-.contactForm .row100 input::placeholder,
-.contactForm .row100 textarea::placeholder{
-    color: rgba(255, 255, 255, 0.5);
-}
-.contactForm .row100 input[type="submit"]{
-    background: #fff;
-    color: #000;
-    max-width: 100px;
-    /* margin: none; */
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    cursor: pointer;
-    font-weight: 500;
-}
-.sci{
-    position: relative;  /* 왜 쓰는지 이해안감 */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 50px 0;
-}
-.sci ul{
-    display: flex;
-}
-.sci ul li{
-    list-style: none;
-}
-.sci ul li a{
-    text-decoration: none;
-    display: inline-block;
-    margin: 0 30px;
-}
-.sci ul li a img{
-    filter: invert(1);
-    max-width: 40px;
-}
-.sci ul li a img:hover{
-    filter: invert(0.5);
-}
-.copyright a{
-    color: #fff;
-}
 
-/* 내가 수정한거 */
-@media (max-width:1160px){
-    .stats{
-        margin-top: -200px;
-        padding-top: 200px;
-    }
-}
 
-/* Responsive */
-.toggle{
-    display: none;
-}
-@media (max-width: 992px){
-    .toggle{
-        display: block;
-        position: relative;
-        width: 30px;
-        height: 30px;
-        cursor: pointer;
-    }
-    .toggle::before{
-        content: '';
-        position: absolute;
-        top: 4px;
-        width: 100%;
-        height: 2px;
-        background: #000;
-        z-index: 1;
-        box-shadow:  0 10px 0 #000;
-        transition: 0.5s;
-    }
-    .toggle::after{
-        content: '';
-        position: absolute;
-        bottom: 4px;
-        width: 100%;
-        height: 2px;
-        background: #000;
-        z-index: 1;
-        transition: 0.5s;
-    }
-    header{
-        padding: 5px 50px;
-        background: #fff;
-        position: relative;
-    }
-    header ul{
-        position: absolute;
-        top: 58px;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        text-align: center;
-        /* overflow: auto; */
-        background: #fff;
-        visibility: hidden;
-        opacity: 0 ;
-    }
-    header.active ul{
-        visibility: visible;
-        opacity: 1;
-        display: block;
-        padding-top: 20px;
-    }
-    header.active ul li a{
-        display: inline-block;
-        margin: 10px 0;
-        font-size: 20px;
-    }
-    header .logo,
-    header ul li a{
-        color: #000;
-    }
-    .banner{
-        background-position: center;
-    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries */
+@media screen and (max-width: 500px){
     .banner h2{
         font-size: 60px;
-        padding: 0 50px;
     }
     .sec{
-        padding: 100px 50px 50px 50px;
-    }
-    .services .box{
-        width: 100%;
-    }
-    .stats{
-        padding-top: 250px;
-    }
-    .row100{
-        flex-direction: column;
-    }
-    .contactForm .row100 .inputBx50,
-    .contactForm .row100 .inputBx100{
-        width: 100%;
-        margin: 0;
-    }
-    .sci{
-        margin: 20px;
-    }
-    .sci ul li a img{
-        font-size: 24px;
-    }
-    h3{
-        font-size: 36px;
-    }
-    body{
-        width: 100%;
-        
-    }
-}
-@media (max-width: 450px){
-    html{
-        width: 120%;
-    }
-}
-@media screen and (max-width: 600px){
-    .banner h2 {
-        font-size: 40px;
-        padding: 0 20px;
-    }
-    .sec {
-        padding: 50px 20px 20px 20px;
-    }
-    .sci{
-        margin: 10px;
-    }
-    .sci ul li a img{
-        font-size: 14px;
-    }
-    h3{
-        font-size: 26px;
-    }
-    .stats {
-        padding-top: 250px;
-    }
-    p{
-        font-size: 14px;
-    }
-    .teamBx{
-        position: relative;  /* 왜 쓰는지 이해안감 */
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        grid-gap: 15px;
-        max-width: 100%;
-        margin-top: 20px;
-    }
-    .teamBx .member{
-        position: relative;  /* 왜 쓰는지 이해안감 */
-        background: #000;
-        min-height: 250px;
-        width: 200px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        padding: 20px;
     }
 }
