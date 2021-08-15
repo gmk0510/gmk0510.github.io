@@ -9,6 +9,11 @@
     <title>Responsive website food</title>
 </head>
 <body>
+    <!-- scroll top -->
+    <a href="#" class="scrolltop" id="scroll-top">
+        <i class="bx bx-chevron-up scrolltop__icon"></i>
+    </a>
+
     <!-- header -->
     <header class="l-header" id="header">
         <nav class="nav bd-container">
@@ -16,11 +21,11 @@
 
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
-                    <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
-                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                    <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
-                    <li class="nav__item"><a href="#menu" class="nav__link">Menu</a></li>
-                    <li class="nav__item"><a href="#contact" class="nav__link">Contact Us</a></li>
+                    <li class="nav__item"><a href="#home" class="nav__link active-link" onclick="remove()">Home</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link" onclick="remove()">About</a></li>
+                    <li class="nav__item"><a href="#services" class="nav__link" onclick="remove()">Services</a></li>
+                    <li class="nav__item"><a href="#menu" class="nav__link" onclick="remove()">Menu</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link" onclick="remove()">Contact Us</a></li>
                 </ul>
             </div>
 
@@ -29,6 +34,21 @@
             </div>
         </nav>
     </header>
+
+    <main class="l-main">
+        <!-- home -->
+        <section class="home" id="home">
+            <div class="home__container bd-container bd-grid">
+                <div class="home__data">
+                    <h1 class="home__title">Tasty food</h1>
+                    <h2 class="home__subtitle">Try the best food of <br /> the week.</h2>
+                    <a href="#" class="button">View Menu</a>
+                </div>
+
+                <img src="5-css,images/5-15images/home.png" class="home__img">
+            </div>
+        </section>
+    </main>
 
 
 
@@ -46,7 +66,59 @@
 
     <!-- main js -->
     <script>
+        // show menu 
+        // add classList
+        const menuToggle = document.querySelector('.nav__toggle');
+        const navMenu = document.querySelector('#nav-menu');
+        
+        menuToggle.addEventListener('click', function(){
+            menuToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        })
 
+        // remove classList
+        function remove(){
+            navMenu.classList.toggle('active');
+        }
+
+
+
+        // scroll sections active link
+        const sections = document.querySelectorAll('section[id]');
+
+        function scrollActive(){
+            const scrollY = window.pageYOffset
+        
+            sections.forEach(current =>{
+                const sectionHeight = current.offsetHeight
+                const sectionTop = current.offsetTop - 50;
+                sectionId = current.getAttribute('id')
+        
+                if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+                    document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
+                }else{
+                    document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
+                }
+            })
+        }
+        window.addEventListener('scroll', scrollActive);
+
+        // change background header
+        function scrollHeader(){
+            const nav = document.getElementById('header')
+            if(this.scrollY >= 200) nav.classList.add('scroll-header'); else nav.classList.remove('scroll-header')
+        }
+
+        window.addEventListener('scroll', scrollHeader);
+
+        // show scroll top
+        window.addEventListener('scroll', function(){
+            var scrollTop = document.querySelector('.scrolltop');
+
+            scrollTop.classList.toggle('active', window.scrollY >= 560);
+        })
+
+        
     </script>
 </body>
 </html>
