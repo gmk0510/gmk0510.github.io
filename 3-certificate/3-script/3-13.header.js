@@ -1,6 +1,13 @@
-$(".nav>ul>li").mouseover(function(){
-    $(".nav>ul>li>ul").stop().slideDown(200);
-});
-$(".nav>ul>li").mouseout(function(){
-    $(".nav>ul>li>ul").stop().slideUp(200);
+const app = Vue.createApp({
+    data(){
+        return{
+            firstName: 'John',
+            lastName: 'Doe',
+            email: 'John@gmail.com',
+            gender: 'male',
+            picture: 'https://randomuser.me/api/portraits/men/10.jpg',
+        }
+    },
 })
+
+app.mount('#app')
