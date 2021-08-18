@@ -26,6 +26,8 @@
                     <li class="nav__item"><a href="#services" class="nav__link" onclick="remove()">Services</a></li>
                     <li class="nav__item"><a href="#menu" class="nav__link" onclick="remove()">Menu</a></li>
                     <li class="nav__item"><a href="#contact" class="nav__link" onclick="remove()">Contact Us</a></li>
+
+                    <li><i class="bx bx-moon change-theme" id="theme-button"></i></li>
                 </ul>
             </div>
 
@@ -53,8 +55,8 @@
         <section class="about section bd-container" id="about">
             <div class="about__container bd-grid">
                 <div class="about__data">
-                    <span class="section-subtitle">About us</span>
-                    <h2 class="section-title">We cook the best <br /> tasty food</h2>
+                    <span class="section-subtitle about__initial">About us</span>
+                    <h2 class="section-title about__initial">We cook the best <br /> tasty food</h2>
                     <p class="about__description">We cook the best food in the entire city, wuth excellent customer service, the best meals and at the best price, visit us.</p>
                     <a href="#" class="button">Explore history</a>
                 </div>
@@ -382,8 +384,8 @@
         <section class="app section bd-container">
             <div class="app__container bd-grid">
                 <div class="app__data">
-                    <span class="section-subtitle">App</span>
-                    <h2 class="section-title">App is aviable</h2>
+                    <span class="section-subtitle app__initial">App</span>
+                    <h2 class="section-title app__initial">App is aviable</h2>
                     <p class="app__description">Find our application and download it, you can make reservations, food orders, see your deliveries on the way and much more.</p>
     
                     <div class="app__stores">
@@ -400,8 +402,8 @@
         <section class="contact section bd-container" id="contact">
             <div class="contact__container bd-grid">
                 <div class="contact__data">
-                    <span class="section-subtitle">Let's talk</span>
-                    <h2 class="section-title">Contact us</h2>
+                    <span class="section-subtitle contact__initial">Let's talk</span>
+                    <h2 class="section-title contact__initial">Contact us</h2>
                     <p class="contact__description">If you want to reserve a table in our restaurant, contact us and we will attend you quickly with our 24/7 chat service.</p>
                 </div>
     
@@ -505,6 +507,8 @@
         }
         window.addEventListener('scroll', scrollActive);
 
+
+
         // change background header
         function scrollHeader(){
             const nav = document.getElementById('header')
@@ -513,6 +517,8 @@
 
         window.addEventListener('scroll', scrollHeader);
 
+
+
         // show scroll top
         window.addEventListener('scroll', function(){
             var scrollTop = document.querySelector('.scrolltop');
@@ -520,6 +526,36 @@
             scrollTop.classList.toggle('active', window.scrollY >= 560);
         })
 
+
+
+        // dark light theme
+        const themeButton = document.querySelector('#theme-button');
+        const body = document.querySelector('body');
+        const iconTheme = 'bx-sun';
+
+        themeButton.addEventListener('click', function(){
+            body.classList.toggle('dark-theme');
+            themeButton.classList.toggle(iconTheme);
+        })
+
+
+
+        // scroll revel animation
+        const sr = ScrollReveal({
+            origin: 'top',
+            distance: '30px',
+            duration: 2000,
+            reset: true
+        });
+
+        sr.reveal(`.home__data, .home__img,
+                    .about__data, .about__img,
+                    .services__content, .menu__content,
+                    .app__data, .app__img,
+                    .contact__data, .contact__button,
+                    .footer__content`, {
+            interval: 200
+        })
         
     </script>
 
