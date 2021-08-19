@@ -31,7 +31,7 @@ body{
     width: 300px;
     height: 100%;
     border-right: 1px solid rgba(0, 0, 0, 0.05);
-    background: var(--white2);
+    background: var(--white2);  /* #444 */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,8 +47,8 @@ body{
 }
 .navigation ul{
     position: relative;
-    top: 0;
-    left: 0;
+    /* top: 0; */
+    /* left: 0; */
     width: 100%;
     padding: 20px 40px;
 }
@@ -419,7 +419,7 @@ p{
 /* contact */
 .contact{
     display: flex;
-    justify-content: flex-start;
+    /* justify-content: flex-start; */
     align-items: center;
     flex-direction: column;
 }
