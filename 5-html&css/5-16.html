@@ -18,7 +18,7 @@
 
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
-                        <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link active">Home</a></li>
                         <li class="nav__item"><a href="#" class="nav__link">About</a></li>
                         <li class="nav__item"><a href="#" class="nav__link">Skills</a></li>
                         <li class="nav__item"><a href="#" class="nav__link">Work</a></li>
@@ -32,6 +32,42 @@
             </nav>
         </header>
 
+        <main class="l-main">
+            <!-- home -->
+            <section class="home bd-grid" id="home">
+                <div class="home__data">
+                    <h1 class="home__title">Hi, <br />I'am <span class="home__title-color">Marlon</span><br /> Web Designer</h1>
+                    <a href="#" class="button">Contact</a>
+                </div>
+
+                <div class="home__social">
+                    <a href="#" class="home__social-icon"><i class="bx bxl-linkedin"></i></a>
+                    <a href="#" class="home__social-icon"><i class="bx bxl-behance"></i></a>
+                    <a href="#" class="home__social-icon"><i class="bx bxl-github"></i></a>
+                </div>
+
+                <div class="home__img">
+                    <img src="5-css,images/5-16images/perfil.png" alt="">
+                </div>
+            </section>
+
+            <!-- about -->
+            <section class="about section" id="about">
+                <h2 class="section-title">About</h2>
+
+                <div class="about__container bd-grid">
+                    <div class="about__img">
+                        <img src="5-css,images/5-16images/about.jpg" alt="">
+                    </div>
+
+                    <div>
+                        <h2 class="about__subtitle">I'am Marlon</h2>
+                        <p class="about__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quas dignissimosea. reprehenderit doloremque nemo incidunt iure ab doloribus, sequi quisquam deleniti error cupiditate a pariatur, nulla ipsum ducimus corrupti.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
 
 
 
@@ -39,7 +75,32 @@
     <script src="https://unpkg.com/scrollreveal"></script>
 
     <script>
-
+        /*===== MENU SHOW =====*/ 
+        const showMenu = (toggleId, navId) =>{
+            const toggle = document.getElementById(toggleId),
+            nav = document.getElementById(navId)
+        
+            if(toggle && nav){
+                toggle.addEventListener('click', ()=>{
+                    nav.classList.toggle('show')
+                })
+            }
+        }
+        showMenu('nav-toggle','nav-menu')
+        
+        /*===== ACTIVE AND REMOVE MENU =====*/
+        const navLink = document.querySelectorAll('.nav__link');   
+        
+        function linkAction(){
+            /*Active link*/
+            navLink.forEach(n => n.classList.remove('active'));
+            this.classList.add('active');
+            
+            /*Remove menu mobile*/
+            const navMenu = document.getElementById('nav-menu')
+            navMenu.classList.remove('show')
+        }
+        navLink.forEach(n => n.addEventListener('click', linkAction));
     </script>
 </body>
 </html>
