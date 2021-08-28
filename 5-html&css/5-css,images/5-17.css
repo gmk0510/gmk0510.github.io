@@ -163,3 +163,102 @@ img{
 .show{
     right: 0;
 }
+
+/* home */
+.home{
+    position: relative;
+    background: var(--first-color);
+    overflow: hidden;
+}
+.home__container{
+    height: calc(100vh - var(--header-height));
+    row-gap: 5rem;
+}
+.home__title{
+    align-self: flex-end;  /* ? */
+    font-size: var(--big-font-size);
+    color: var(--white-color);
+    line-height: .8;
+}
+.home__title span{
+    text-shadow: 0 20px 25px rgba(0, 0, 0, .5);
+}
+.home__scroll{
+    align-self: flex-end;  /* ? */
+    padding-bottom: var(--mb-4);
+}
+.home__scroll-link{
+    writing-mode: vertical-lr;  /* ?, 텍스트 줄이 수평 또는 세로로 배치되는지 여부와 블록이 진행되는 방향을 설정, 쓰기 모드 */
+    transform: rotate(-180deg);
+    color: var(--white-color);
+}
+.home__img{
+    position: relative;  /* .home */
+    right: 0;
+    bottom: 0;
+    width: 295px;
+}
+
+/* about */
+.about__container{
+    justify-items: center;  
+    row-gap: 2rem;
+    text-align: center;
+}
+.about__img{
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+    width: 120px;
+    height: 120px;
+    background: var(--first-color);
+    border-radius: 50%;
+    overflow: hidden;
+}
+.about__img img{
+    width: 100px;
+}
+.about__subtitle{
+    font-size: var(--h2-font-size);
+    color: var(--first-color);
+    margin-bottom: var(--mb-1);
+}
+.about__text{
+    margin-bottom: var(--mb-4);
+}
+.about__profession{
+    display: block;
+    margin-bottom: var(--mb-4);
+}
+.about__social-icon{
+    font-size: 1.4rem;
+    margin: 0 var(--mb-1);
+}
+.about__social-icon:hover{
+    color: var(--first-color);
+}
+
+/* skills */
+.skills__container{
+    row-gap: 2rem;
+}
+.skills__subtitle{
+    color: var(--first-color);
+    margin-bottom: var(--mb-3);
+}
+.skills__name{
+    display: inline-block;
+    font-size: var(--small-font-size);
+    margin-right: var(--mb-2);
+    margin-bottom: var(--mb-3);
+    padding: .25rem .5rem;
+    background: var(--white-color);
+    border-radius: .25rem;
+}
+.skills__name:hover{
+    background: var(--first-color);
+    color: var(--white-color);
+}
+.skills__img img{
+    border-radius: .5rem;
+}
