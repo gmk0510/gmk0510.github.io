@@ -37,24 +37,115 @@
         </nav>
     </header>
 
-
-
-
-
-
-
-
     <main class="l-main">
-        
+        <!-- home -->
+        <section class="home" id="home">
+            <div class="home__container bd-grid">
+                <div class="home__data">
+                    <div class="home__img">
+                        <img src="5-css,images/5-18images/perfil.png" alt="">
+                    </div>
+
+                    <h1 class="home__title">Harris Willian</h1>
+                    <span class="home__profession">Frontend Developer</span>
+
+                    <div class="home__social">
+                        <a href="#" class="home__social-link"><i class="bx bxl-linkedin"></i></a>
+                        <a href="#" class="home__social-link"><i class="bx bxl-github"></i></a>
+                        <a href="#" class="home__social-link"><i class="bx bxl-dribbble"></i></a>
+                        <a href="#" class="home__social-link"><i class="bx bxl-behance"></i></a>
+                    </div>
+
+                    <a href="#" download="" class="button home__button">Download Resume</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- about -->
+        <section class="about section" id="about">
+            <span class="section-subtitle">My intro</span>
+            <h2 class="section-title">About Me</h2>
+
+            <div class="about__container bd-grid">
+                <div class="about__data">
+                    <p class="about__description">Hi, I'm a frontend developer, passionate about creating and developing web interfaces. I have many years of experience in this area of work, with multiple quality projects.</p>
+                    <img src="5-css,images/5-18images/about.png" alt="" class="about__img">
+                </div>
+
+                <div class="about__information">
+                    <h3 class="about__information-title">Information</h3>
+
+                    <div class="about__information-data">
+                        <i class="bx bx-user about__information-icon"></i>
+                        <span>Harris Willian</span>
+                    </div>
+                    <div class="about__information-data">
+                        <i class="bx bx-phone about__information-icon"></i>
+                        <span>999-888-777</span>
+                    </div>
+                    <div class="about__information-data">
+                        <i class="bx bx-envelope about__information-icon"></i>
+                        <span>user@gmail.com</span>
+                    </div>
+                </div>
+
+                <div class="about__information">
+                    <h3 class="about__information-title">Experience and support</h3>
+
+                    <div class="about__information-data">
+                        <i class="bx bx-medal about__information-icon"></i>
+                        <div>
+                            <span class="about__information-subtitle">5 Years Job</span>
+                            <span class="about__information-subtitle-small">Experience</span>
+                        </div>
+                    </div>
+                    <div class="about__information-data">
+                        <i class="bx bx-briefcase about__information-icon"></i>
+                        <div>
+                            <span class="about__information-subtitle">50+ Projects</span>
+                            <span class="about__information-subtitle-small">Completed</span>
+                        </div>
+                    </div>
+                    <div class="about__information-data">
+                        <i class="bx bx-support about__information-icon"></i>
+                        <div>
+                            <span class="about__information-subtitle">Support</span>
+                            <span class="about__information-subtitle-small">Online 24/7</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
 
     <script>
+        // show menu
         var navMenu = document.querySelector('#nav-menu');
 
         function Menu(){
-            navMenu.classList.toggle('active');
+            navMenu.classList.toggle('Menuactive');
         }
+
+        // scroll sections active link
+        const sections = document.querySelectorAll('section[id]')
+
+        function scrollActive(){
+            const scrollY = window.pageYOffset
+        
+            sections.forEach(current =>{
+                const sectionHeight = current.offsetHeight
+                const sectionTop = current.offsetTop - 50;
+                sectionId = current.getAttribute('id')
+        
+                if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+                    document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active')
+                }else{
+                    document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active')
+                }
+            })
+        }
+        window.addEventListener('scroll', scrollActive)
     </script>
 </body>
 </html>
