@@ -276,12 +276,112 @@ img{
 .about__information{
     margin-bottom: var(--mb-4);
 }
+.about__information-title{
+    font-size: var(--h3-font-size);
+    color: var(--first-color-dark);
+    margin-bottom: var(--mb-2);
+}
+.about__information-data{
+    display: flex;
+    align-items: center;
+    padding-left: 1.5rem;
+    margin-bottom: var(--mb-3);
+}
+.about__information-icon{
+    font-size: 1.5rem;
+    color: var(--first-color);
+    margin-right: var(--mb-4);
+}
+.about__information-subtitle{
+    display: block;
+    font-size: var(--font-semi-bold);
+}
+.about__information-subtitle-small{
+    font-size: small;
+}
 
 /* ===== SKILLS =====*/
-
+.skills__container{
+    row-gap: 2rem;
+}
+.skills__subtitle{
+    font-size: var(--h3-font-size);
+    color: var(--first-color-dark);
+    margin-bottom: var(--mb-2);
+}
+.skills__data{
+    position: relative;
+    display: flex;
+    justify-content: space-between; 
+    margin: 0 var(--mb-2);
+    margin-bottom: var(--mb-4);
+}
+.skills__name{
+    text-transform: uppercase;
+}
+.skills__bar{
+    position: absolute;  /* .skills__data */
+    bottom: -.75rem;
+    height: .25rem;
+    background: var(--first-color);
+}
+.skills__html{
+    width: 80%;
+}
+.skills__js{
+    width: 60%;
+}
+.skills__vue{
+    width: 40%;
+}
 
 /* ===== EDUCATION =====*/
-
+.education__container{
+    row-gap: 2rem;
+}
+.education__content{
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+}
+.education__year, .education__race{
+    font-size: var(--h3-font-size);
+    margin-bottom: .25rem;
+}
+.education__university, .education__specialty{
+    display: block;
+    font-size: var(--smaller-font-size);
+}
+.education__year, .education__university{
+    text-align: right;
+}
+.education__time{
+    padding: 0 1rem;
+    justify-self: center;
+}
+.education__rounder{
+    position: relative;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: var(--first-color);
+    border-radius: 50%;
+}
+.education__rounder::before{
+    content: '';
+    position: absolute;  /* .education__rounder */
+    transform: translate(-4px, -4px);
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--first-color);
+    border-radius: 50%;
+}
+.education__line{
+    display: block;
+    height: 90%;
+    width: 2px;
+    background: var(--first-color);
+    transform: translate(5px, -4px);
+}
 
 /* ===== SERVICES =====*/
 
