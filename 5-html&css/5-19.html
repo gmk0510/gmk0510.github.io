@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="5-css,images/5-19.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- header -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">Alexa</a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list grid">
+                    <li onclick="showMenu()" class="nav__item"><a href="#home" class="nav__link"><i class="uil uil-estate nav__icon"></i> Home</a></li>
+                    <li onclick="showMenu()" class="nav__item"><a href="#about" class="nav__link"><i class="uil uil-user nav__icon"></i> About</a></li>
+                    <li onclick="showMenu()" class="nav__item"><a href="#skills" class="nav__link"><i class="uil uil-file-alt nav__icon"></i> Skills</a></li>
+                    <li onclick="showMenu()" class="nav__item"><a href="#services" class="nav__link"><i class="uil uil-briefcase-alt nav__icon"></i> Services</a></li>
+                    <li onclick="showMenu()" class="nav__item"><a href="#portfolio" class="nav__link"><i class="uil uil-scenery nav__icon"></i> Portfolio</a></li>
+                    <li onclick="showMenu()" class="nav__item"><a href="#contact" class="nav__link"><i class="uil uil-message nav__icon"></i> Contactme</a></li>
+                </ul>
+                <i class="uil uil-times nav__close" id="nav-close" onclick="showMenu()"></i>
+            </div>
+
+            <div class="nav__btns">
+                <div class="nav__toggle" id="nav-toggle" onclick="showMenu()"><i class="uil uil-apps"></i></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- main -->
+    <main class="main">
+        <!-- home -->
+        <section class="home section" id="home">
+            <div class="home__container container grid">
+                <div class="home__content grid">
+                    <div class="home__social">
+                        <a href="" class="home__social-icon"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+
+
+    <!-- js -->
+
+    <!-- show menu -->
+    <script>
+        function showMenu(){
+            document.querySelector('.nav__menu').classList.toggle('show');
+        }
+    </script>
+</body>
+</html>
