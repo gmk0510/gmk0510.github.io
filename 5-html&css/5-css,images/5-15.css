@@ -156,7 +156,7 @@ img{
     align-items: center;
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px){  /* 0px ~ 768px */
     .nav__menu{
         position: fixed;
         top: -100%;
@@ -238,7 +238,7 @@ img{
 /* home */
 .home__container{
     height: calc(100vh - var(--header-height));
-    align-content: center;  /* ? */
+    align-content: center;  /* 자식이 두줄일 경우 두줄을 포함해 가운데 정렬, 한줄일 경우 align-item 과 동일 */
 }
 .home__title{
     font-size: var(--biggest-font-size);
@@ -252,7 +252,7 @@ img{
 }
 .home__img{
     width: 300px;
-    justify-self: center;  /* ?, ===margin: auto */
+    justify-self: center;  /* ?, 나눠진 박스 내에서 가운데 정렬, ===margin: auto */
 }
 
 /* buttons */
@@ -278,12 +278,12 @@ img{
 .about__img{
     width: 280px;
     border-radius: .5rem;
-    justify-self: center;  /* ? */
+    justify-self: center;  /* ?, flex,grid 로 나눠진 박스 내에서의 가로축 가운데 정렬 */
 }
 
 /* services */
 .services__container{
-    row-gap: 2.5rem;
+    row-gap: 2.5rem;  /* felx, grid 사용가능 */
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 .services__content{
@@ -320,7 +320,7 @@ img{
 }
 .menu__img{
     width: 100px;
-    align-self: center;  /* ?, ===margin: auto */
+    align-self: center;  /* ?, flex,grid 교차축 아이템 정렬(margin-bottom 이 있어서 가운데만 정렬중)개별적 적용, align-item 보다 우선순위, 가운데 정렬한다, ===margin: auto */
     margin-bottom: var(--mb-2);
 }
 .menu__name, .menu__preci{
@@ -361,7 +361,7 @@ img{
 }
 .app__img{
     width: 230px;
-    justify-self: center;  /* ?, ===margin: auto */
+    justify-self: center;  /* 나눠진 박스에서의 가로축 가운데 정렬(개별), ===margin: auto */
 }
 
 /* contact */

@@ -1,27 +1,43 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="3-css/3-0style.css">
     <title>Document</title>
 </head>
 <body>
     <div id="app">
-        <img v-bind:scr="picture" v-bind:alt="firstName" />
-        <h1>{{firstName}} {{lastName}}</h1>
-        <h3>Email: {{email}}</h3>
-        <button>Get Random User</button>
+        {{message}}
     </div>
-
-
-    <script src="https://unpkg.com/vue@3.0.5"></script>
-    <script src="3-script/3-13.header.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                message: "this is message"
+            },
+            beforeCreate: function(){
+                console.log('beforeCreate')
+            },
+            created: function(){
+                console.log("created");
+            },
+            mounted: function(){
+                console.log("mounted");
+                this.message = 'message';
+            },
+            updated: function(){
+                console.log('update');
+            }
+        });
+        document.querySelector('#app').b
+    </script>
 </body>
-</html> -->
+</html>
 
-<!DOCTYPE html>
+
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -44,4 +60,4 @@
         });
     </script>
 </body>
-</html>
+</html> -->

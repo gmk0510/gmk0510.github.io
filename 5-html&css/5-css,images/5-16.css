@@ -128,7 +128,7 @@ img{
   align-items: center;
   font-weight: var(--font-semi);
 }
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px){ /* 0px ~ 768px */
   .nav__menu{
       position: fixed;
       top: var(--header-height);
@@ -190,7 +190,7 @@ img{
   row-gap: 1rem;
 }
 .home__data{
-  align-self: center;  /* ? */ 
+  align-self: center;  /* x,y축 기준 가운데 개별정렬, block element라서 y축 가운데 정렬만한것처럼 보임 */ 
 }
 .home__title{
   font-size: var(--big-font-size);
@@ -208,6 +208,8 @@ img{
   margin-bottom: var(--mb-2);
   font-size: 1.5rem;
   color: var(--second-color);
+  position: relative;
+  z-index: 999;
 }
 .home__social-icon:hover{
   color: var(--first-color);
@@ -241,7 +243,7 @@ img{
   margin-bottom: var(--mb-2);
 }
 .about__img{
-  justify-self: center;  /* ? */
+  justify-self: center;  /* x축 기준 가운데 개별정렬, ===margin: auto */
 }
 .about__img img{
   width: 200px;
