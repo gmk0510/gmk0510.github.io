@@ -28,6 +28,9 @@
             </div>
 
             <div class="nav__btns">
+                <!-- dark/light mode -->
+                <i class="uil uil-moon change-theme" id="theme-button"></i>
+                
                 <div class="nav__toggle" id="nav-toggle" onclick="showMenu()"><i class="uil uil-apps"></i></div>
             </div>
         </nav>
@@ -611,7 +614,7 @@
 
     <!-- scroll top -->
     <a href="#" class="scrollup" id="scroll-up">
-        <i class="uil uil-arrpw-up scrollup__icon"></i>
+        <i class="uil uil-arrow-up scrollup__icon"></i>
     </a>
 
     
@@ -668,6 +671,15 @@
                     modalView.classList.remove('active-modal')
                 })
             })
+        })
+
+        window.addEventListener('scroll', function(){
+            document.querySelector('.scrollup').classList.toggle('show-scroll', window.scrollY > 100)
+        });
+
+        document.querySelector('.change-theme').addEventListener('click', function(){
+            document.querySelector('body').classList.toggle('dark-theme');
+            document.querySelector('.change-theme').classList.toggle('uil-sun')
         })
     </script>
 </body>
