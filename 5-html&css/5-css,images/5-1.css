@@ -7,9 +7,8 @@
 .header{
     height: 100vh;
     width: 100%t;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), 
+    background: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), center, no-repeat
     url(5-1images/11.jpg);
-    background-position: center;
     background-size: cover;
     position: relative;
 }
@@ -24,7 +23,7 @@ nav img{
     height: 70px;
 }
 .nav-links{
-    flex: 1;
+    /* flex: 1; */
     text-align: right;
 }
 .nav-links ul li{
@@ -50,7 +49,10 @@ nav img{
 .nav-links ul li:hover::after{
     width: 100%;
 }
-i{visibility: hidden;}
+/* i{visibility: hidden;} */
+.header nav .fas{
+    display: none;
+}
 
 .text-box{
     width: 90%;
@@ -88,6 +90,9 @@ i{visibility: hidden;}
 }
 
 @media(max-width: 700px){
+    .header nav .fas{
+    display: block;
+}
     .text-box h1{
         font-size: 22px;
     }
@@ -209,7 +214,7 @@ h3{
 }
 .layer:hover h3{
     bottom: 49%;
-    opacity: 1;
+    opacity: 1; 
 }
 
 /* facilities */

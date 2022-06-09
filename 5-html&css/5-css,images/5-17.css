@@ -201,7 +201,7 @@ img{
 
 /* about */
 .about__container{
-    justify-items: center;  
+    justify-items: center;  /* 그리드 컨테이너 내부 모든 그리드 아이템에 적용 */
     row-gap: 2rem;
     text-align: center;
 }
@@ -403,7 +403,7 @@ img{
         row-gap: 0;
     }
     .home__img{
-        width: 524px;
+        width: 324px;
         right: 10%;
     }
 
@@ -431,4 +431,11 @@ img{
         grid-template-rows: repeat(2, 1fr);
         column-gap: 2rem;
     }
+}
+
+@media screen and (min-width: 1000px){  /* 1000 ~ 9999 */
+    .bd-grid{max-width: none;}
+    .home__scroll{display: none;}
+    .home__container{grid-template-columns: 1fr 1fr;}
+    .home__container img{position: initial;}
 }

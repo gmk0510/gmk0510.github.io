@@ -1,0 +1,315 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3rem;
+  /*========== Colors ==========*/
+  --hue-color: 206;
+  --black-color: hsl(206, 4%, 4%);
+  --black-color-alt: hsl(206, 4%, 8%);
+  --title-color: hsl(206, 4%, 95%);
+  --text-color: hsl(206, 4%, 75%);
+  --text-color-light: hsl(206, 4%, 65%);
+  --white-color: #FFF;
+  --body-color: hsl(206, 4%, 6%);
+  --container-color: hsl(206, 4%, 10%);
+  --text-gradient: linear-gradient(hsl(206, 4%, 24%), hsl(206, 4%, 8%));
+  --scroll-thumb-color: hsl(206, 4%, 16%);
+  --scroll-thumb-color-alt: hsl(206, 4%, 20%);
+  /*========== Font and typography ==========*/
+  --body-font: 'Poppins', sans-serif;
+  --biggest-font-size: 5rem;
+  --bigger-font-size: 3.5rem;
+  --big-font-size: 2.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+  --text-line-height: 2rem;
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  /*========== Margenes Bottom ==========*/
+  --mb-0-5: .5rem;
+  --mb-0-75: .75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+@media screen and (min-width: 968px) {
+  :root {
+    --biggest-font-size: 7.5rem;
+    --bigger-font-size: 4.5rem;
+    --big-font-size: 4rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+/*=============== BASE ===============*/
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: var(--header-height) 0 0 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background: var(--body-color);
+    color: var(--text-color);
+}
+
+h1,h2,h3{
+    color: var(--title-color);
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+button,
+input{
+    border: none;
+    outline: none;
+}
+
+button{
+    cursor: pointer;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* reusable css classes */
+.section {
+    padding: 4rem 0 2rem;
+}
+
+.section__title {
+    font-size: var(--bigger-font-size);
+    text-align: center;
+    margin-bottom: var(--mb-2-5);
+}
+
+.section__title-gradient {
+    background: var(--text-gradient);
+    color: transparent; /* 완전한 투명색 rgba(0,0,0,0) */
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+/* layout */
+.main {
+    overflow: hidden; 
+}
+
+.container {
+    max-width: 968px;
+    margin-left: var(--mb-1-5);
+    margin-right: var(--mb-1-5);
+}
+
+.grid {
+    display: grid;
+}
+
+/* header */
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+    background: transparent;
+}
+
+/* nav */
+.nav {
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__logo {
+    display: flex;
+    width: 1.5rem;
+}
+
+.nav__toggle {
+    font-size: 1.2rem;
+    color: var(--white-color);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 767px) { /* 0 ~ 767px */
+    .nav__menu {
+        position: fixed;
+        background: var(--body-color);
+        top: -100%;
+        left: 0;
+        width: 100%;
+        padding: 4rem 0 3rem;
+        transition: .6s;
+    }
+}
+
+.nav__list {
+    display: flex;
+    flex-direction: column; /* 세로 정렬이여서 align-items: center; 이 가운데 정렬로 적용 */
+    align-items: center;
+    row-gap: 1rem;
+}
+
+.nav__link {
+    color: var(--white-color);
+    font-size: var(--h2-font-size);
+    text-transform: uppercase;
+    font-weight: var(--font-semi-bold);
+    background: var(--text-gradient);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+/* show */
+.show-menu {
+    top: 0;
+}
+
+/* change background header */
+.scroll-header {
+    background: var(--black-color-alt);
+}
+
+.nav__link:hover {
+    background: var(--white-color);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.nav__close {
+    position: absolute; /* .nav__menu */
+    font-size: 1.5rem;
+    top: 1rem;
+    right: 1rem;
+    color: var(--white-color);
+    cursor: pointer;
+}
+
+/* home */
+.home__img {
+    width: 250px;
+    position: absolute; /* .main */
+    top: -16rem;
+    right: 1.5rem;
+}
+
+.home__data {
+    padding-top: 5rem;
+}
+
+.home__header {
+    position: relative;
+}
+
+.home__title {
+    font-size: var(--bigger-font-size);
+    background: var(--text-gradient);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    position: absolute; /* .home__header */
+    top: -4rem;
+    left: 1rem;
+    line-height: 6rem;
+}
+
+.home__subtitle {
+    font-size: var(--big-font-size);
+    margin-bottom: var(--mb-2-5);
+}
+
+.home__title-description {
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+    margin-bottom: var(--mb-1);
+}
+
+.home__description {
+    margin-bottom: var(--mb-2-5);
+    line-height: var(--text-line-height);
+}
+
+.home__price {
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-semi-bold);
+    margin-left: var(--mb-0-75);
+}
+
+/* buttons */
+.button {
+    display: inline-block;
+    background: var(--black-color);
+    color: var(--white-color);
+    padding: 1rem 1.25rem;
+    border-radius: .5rem;
+    transition: .3s;
+}
+
+.button:hover {
+    background: var(--black-color-alt);
+}
+
+.button__icon {
+    font-size: 1.2rem;
+}
+
+.button--flex {
+    display: inline-flex; /* ?, ===flex */
+    align-items: center;
+    column-gap: .75rem;
+}
+
+/* sponsor */
+.sponsor__img {
+    width: 90px;
+}
+
+.sponsor__container {
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    row-gap: 5rem;
+    justify-items: center;
+    align-items: center;
+}
+
+/* specs */
+.specs__container {
+    position: relative;
+}
+
+.specs__content {
+    row-gap: 1.5rem;
+}

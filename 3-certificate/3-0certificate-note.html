@@ -1,40 +1,93 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .gray{background-color: rgb(117, 110, 110);}
+        div, button{margin-bottom: 20px;}
+    </style>
 </head>
 <body>
     <div id="app">
-        {{message}}
+        <vue-component1 v-bind:propspt='message2' v-on:color-change='colorchange'></vue-component1>
+        <vue-component2></vue-component2>
+        {{message2}}
     </div>
+
+    <div id="eventBus">
+        <vue-component3></vue-component3>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js"></script>
     <script>
-        new Vue({
-            el: "#app",
-            data: {
-                message: "this is message"
-            },
-            beforeCreate: function(){
-                console.log('beforeCreate')
-            },
-            created: function(){
-                console.log("created");
-            },
-            mounted: function(){
-                console.log("mounted");
-                this.message = 'message';
-            },
-            updated: function(){
-                console.log('update');
+
+        Vue.component('vue-component1', {
+            template: '<button v-on:click="colorchange"> {{propspt}} this is vue component1</button>',
+            props: ['propspt'],
+            methods: {
+                showLog: function(){
+                    this.$emit('show-log')
+                },
+                colorchange: function(){
+                    this.$emit('color-change')
+                }
+                
             }
-        });
-        document.querySelector('#app').b
+        })
+
+        var vc2 = {
+            template: '<div>this is vue component2 {{message3}}</div>',
+            data: function(){
+                return {
+                    message3: 'this is message 3'
+                }
+            }
+
+        }
+
+        new Vue({
+            el: '#app',
+            components: {
+                'vue-component2': vc2
+            },
+            data: {
+                message2: 'this is message 2'
+            },
+            methods: {
+                printText: function(){
+                    console.log('Vue event practice');
+                },
+                colorchange: function(){
+                    document.querySelector('body').classList.toggle('gray');
+                }
+            }
+        })
+
+        var eventBus = new Vue()
+
+        Vue.component('vue-component3', {
+            template: '<button v-on:click="showLog">click console 100</button>',
+            methods: {
+                showLog: function(){
+                    eventBus.$emit('triggerEventBus', 100)
+                }
+            }
+        })
+
+        new Vue({
+            el: '#eventBus',
+            created: function(){
+                eventBus.$on('triggerEventBus', function(value){
+                    console.log(value)
+                })
+            }
+        })
     </script>
 </body>
-</html>
+</html> -->
 
 
 <!-- <!DOCTYPE html>
@@ -47,7 +100,197 @@
 </head>
 <body>
     <div id="app">
-        {{ message }}
+        <h1>Vue Router practice</h1>
+        <p>
+            <router-link to='/main'>Main 컴포넌트로 이동</router-link>
+            <router-link to='/login'>Login 컴포넌트로 이동</router-link>
+        </p>
+        <router-view></router-view>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router@3.0.1/dist/vue-router.js"></script>
+    <script>
+        var Main = {template: '<div>main</div>'};
+        var Login = {template: '<div>login</div>'};
+
+        var routes = [
+            {path: '/main', component: Main},
+            {path: '/login', component: Login}
+        ];
+
+        var router = new VueRouter({
+            routes,
+            // mode: 'history' 사용자가 직접 로컬호스트로 할 경우 작동X 서버에 설정해야됨
+        });
+
+        new Vue({
+            router
+        }).$mount('#app')
+    </script>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daocument</title>
+</head>
+<body>
+    <div id="app">
+        <router-view></router-view>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router@3.0.1/dist/vue-router.js"></script>
+    <script>
+        var User = {template: '<div>User Component <router-view></router-view> </div>'}
+        var Post = {template: '<div>User Post Component</div>'}
+        var Profile = {template: '<div>User Profile Component</div>'}
+
+        var  routes = [
+            {
+                path: '/user',
+                component: User,
+                children: [
+                    {
+                        path: 'posts',
+                        component: Post
+                    },
+                    {
+                        path: 'profile',
+                        component: Profile
+                    }
+                ]
+            }
+        ]
+
+        var router = new VueRouter({
+            routes
+        })
+
+        new Vue({
+            router
+        }).$mount('#app')
+    </script>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+    <div id="app">
+        <router-link to='login'>go login</router-link>
+        <router-view name='aa'></router-view>
+        <router-view></router-view>
+        <router-view name='sf'></router-view>
+        <router-view name=''></router-view>
+        <router-view name='loginbody'></router-view>
+        <router-view name='loginfooter'></router-view>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router@3.0.1/dist/vue-router.js"></script>
+    <script>
+        var Aa = {template: '<div>this aa<div>'}
+        var ad = {template: '<div>this ad<div>'}
+        var Sf = {template: '<div>this sf<div>'}
+
+        var LoginHeader = {template: '<div>This is LoginHeader</div>'}
+        var LoginBody = {template: '<div>This is LoginBody</div>'}
+        var LoginFooter = {template: '<div>This is LoginFooter</div>'}
+
+        var router = new VueRouter({
+            routes: [
+                {
+                    path: '/',
+                    components: {
+                        default: ad,
+                        aa: Aa,
+                        sf: Sf
+                    }
+                },
+                {
+                    path: '/login',
+                    components: {
+                        default: LoginHeader,
+                        aa: Aa,
+                        loginbody: LoginBody,
+                        loginfooter: LoginFooter
+                    }
+                }
+            ]
+        })
+
+        new Vue({
+            router
+        }).$mount('#app')
+
+    </script>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <a v-if="flag">두잇 Vue.js</a>
+        <ul>
+            <li v-for="system in systems">{{ system }}</li>
+        </ul>
+        <p v-show="flag">두잇 Vue.js</p>
+        <h5 v-bind:id="uid">뷰 입문서</h5>
+        <button v-on:click="popupAlert">경고 창 버튼</button>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router@3.0.1/dist/vue-router.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                flag: true,
+                systems: ['android', 'ios', 'window'],
+                uid: 10
+            },
+            methods: {
+                popupAlert: function(){
+                    return alert('경고 창 표시')
+                }
+            }
+        })
+    </script>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <p>{{message}}</p>
+        <button v-on:click="reverseMsg">문자열 역순</button>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js"></script>
@@ -55,9 +298,91 @@
         new Vue({
             el: '#app',
             data: {
-                message: 'Hello Vue.js!'
+                message: 'Hello Vue.js'
+            },
+            methods: {
+                reverseMsg: function(){
+                    this.message = this.message.split('').reverse().join('');
+                    return this.message
+                }
             }
-        });
+        })
     </script>
 </body>
 </html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <input v-model="message">
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello Vue.js!'
+            },
+            watch: {
+                message: function(data){
+                    console.log("message의 값이 바뀝니다 : ", data)
+                }
+            }
+        })
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h3>
+                {{message}},
+                {{test}}
+            </h3>
+        </header>
+        <section>
+            <p v-bind:id="uid"></p>
+            <button v-on:click="clickBtn">alert</button>
+
+            <ul v-if="flag">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello Vue.js!',
+                test: 'this is test',
+                uid: 10,
+                flag: false
+            },
+            methods: {
+                clickBtn: function(){
+                    alert('hi')
+                }
+            }
+        })
+    </script>
+</body>
+</html>
