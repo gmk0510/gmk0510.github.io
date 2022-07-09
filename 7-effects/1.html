@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body {
+            overflow-x: hidden;
+        }
         .itemBx {
             border: 1px solid #000;
             width: 100px;
@@ -23,7 +26,6 @@
             animation-timing-function: 중간 상태 전환 시간간격;
             animation-fill-mode: 애니메이션이 시작||끝난 후 어떤 값 적용;    */
         }
-
         @keyframes item1 {
             from {
                 width: 100px;
@@ -32,10 +34,34 @@
                 width: 200px;
             }
         }
+
+        p {
+            animation-duration: 3s;
+            animation-name: slidein;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes slidein {
+            from {
+                margin-left: 100%;
+                width: 300%;
+            }
+            10% {
+                font-size: 120%;
+            }
+            30% {
+                font-size: 250%;
+            }
+            to {
+                margin-left: 0%;
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="itemBx item1"></div>
     <div class="itemBx item2"></div>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate, modi.</p>
 </body>
 </html>
